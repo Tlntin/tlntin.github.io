@@ -3,7 +3,7 @@
   <entry>
     <title>从无到有免费撸一个博客</title>
     <url>/2020/02/18/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<ol>
+    <content><![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ol>
 <li>首先，你需要有一个github账号。注册地址：<a href="https://github.com/，任意邮箱注册即可。" target="_blank" rel="noopener">https://github.com/，任意邮箱注册即可。</a></li>
 <li>点击右上角的加号，选择New repository，新建一个仓库。</li>
 </ol>
@@ -36,41 +36,35 @@
 <li><p>这样，你就有了自己的一个网站了。如果想要搭一个好看的博客，你还需要做更多，我们下期再讲。</p>
 </li>
 </ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>从无到有免费撸一个博客（中）——免费拥有一个博客</title>
-    <url>/2020/02/17/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2(%E4%B8%AD)/</url>
-    <content><![CDATA[<p>##　连接Ｇithub</p>
-<ol>
+<h2 id="连接Github"><a href="#连接Github" class="headerlink" title="连接Ｇithub"></a>连接Ｇithub</h2><ol>
 <li>首先，我们需要生成一个ssh密匙, 以linux为例：</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
 <li><p>生成的ssh密匙在根目录，.ssh文件夹下面，打开并且复制里面的内容。</p>
-<p><img src="/home/tlntin/.config/Typora/typora-user-images/image-20200218175522100.png" alt="image-20200218175522100"></p>
+<p><img src="/2020/02/18/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/image-20200218175522100.png" alt="image-20200218175522100"></p>
 </li>
 <li><p>打开github，点击头像下面的小三角，点击settings。</p>
 </li>
 </ol>
-<p><img src="/home/tlntin/.config/Typora/typora-user-images/image-20200218175719961.png" alt="image-20200218175719961"></p>
+<p><img src="/2020/02/18/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/image-20200218175719961.png" alt="image-20200218175719961"></p>
 <ol start="4">
 <li><p>点击SSH and GPG keys,然后点击Ｎew SSH key，把你刚刚复制的内容粘贴进去，名字随便取。</p>
-<p><img src="/home/tlntin/.config/Typora/typora-user-images/image-20200218180019640.png" alt="image-20200218180019640"></p>
+<p><img src="/2020/02/18/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/image-20200218180019640.png" alt="image-20200218180019640"></p>
 </li>
 <li><p>终端输入下面的命令，测试是否成功。</p>
 </li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 
-<p><img src="/home/tlntin/.config/Typora/typora-user-images/image-20200218180303267.png" alt="image-20200218180303267"></p>
+<p><img src="/2020/02/18/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/image-20200218180303267.png" alt="image-20200218180303267"></p>
 <h2 id="安装基本工具"><a href="#安装基本工具" class="headerlink" title="安装基本工具"></a>安装基本工具</h2><h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
 
 <h3 id="安装nodejs和npm"><a href="#安装nodejs和npm" class="headerlink" title="安装nodejs和npm"></a>安装nodejs和npm</h3><ol>
 <li>去nodejs官网（地址：<a href="https://nodejs.org/zh-cn/download/）下载Linux安装包，然后解压" target="_blank" rel="noopener">https://nodejs.org/zh-cn/download/）下载Linux安装包，然后解压</a></li>
 </ol>
-<p><img src="/home/tlntin/.config/Typora/typora-user-images/image-20200218180527046.png" alt="image-20200218180527046"></p>
+<p><img src="/2020/02/18/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/image-20200218180527046.png" alt="image-20200218180527046"></p>
 <ol start="2">
 <li>将node-v12xx重命名为node,然后复制到系统盘，我是放在/usr/share/目录下</li>
 </ol>
@@ -84,7 +78,7 @@
 <ol start="4">
 <li>输入node和npm测试是否安装成功。</li>
 </ol>
-<p><img src="/home/tlntin/.config/Typora/typora-user-images/image-20200218181240549.png" alt="image-20200218181240549"></p>
+<p><img src="/2020/02/18/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/image-20200218181240549.png" alt="image-20200218181240549"></p>
 <p>如果npm安装不成功。可以用<code>sudo apt-get install npm</code></p>
 <ol start="5">
 <li><p>npm在国内访问比较慢，可以换国内的淘宝源或者安装cnpm，我这里示范cnpm。</p>
@@ -93,9 +87,9 @@
 <li><p>安装完成后，就可以使用cnpm代替npm了。</p>
 </li>
 </ol>
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
-<h3 id="使用hexo生成博客。"><a href="#使用hexo生成博客。" class="headerlink" title="使用hexo生成博客。"></a>使用hexo生成博客。</h3><ol>
+<h2 id="使用hexo生成博客。"><a href="#使用hexo生成博客。" class="headerlink" title="使用hexo生成博客。"></a>使用hexo生成博客。</h2><ol>
 <li>找到一个空白文件夹用于初始化项目，我是新建的一个hexo文件夹，然后在此文件夹打开终端。输入下面的命名初始化项目。</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo init</span><br><span class="line">cnpm install</span><br></pre></td></tr></table></figure>
@@ -103,7 +97,7 @@
 <ol start="2">
 <li>初始化成功的文件夹如下：</li>
 </ol>
-<p><img src="/home/tlntin/.config/Typora/typora-user-images/image-20200218182111166.png" alt="image-20200218182111166"></p>
+<p><img src="/2020/02/18/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/image-20200218182111166.png" alt="image-20200218182111166"></p>
 <p>   其中node_modeules为安装的模块文件，public为将要发布的静态网站。</p>
 <p>source存放的是markdown文件，用于转换静态网页。themes为主题。_config.yml为站点配置文件。</p>
 <ol start="3">
@@ -121,7 +115,7 @@
 <ol start="2">
 <li><p>将主题丢到hexo的theme目录。修改站点配置文件_config.yml，</p>
 <p>找到theme,后面改成next</p>
-<p><img src="/home/tlntin/.config/Typora/typora-user-images/image-20200218183744843.png" alt="image-20200218183744843"></p>
+<p><img src="/2020/02/18/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/image-20200218183744843.png" alt="image-20200218183744843"></p>
 </li>
 <li><p>点击theme/next目录，修改_config.yml</p>
 </li>
@@ -129,20 +123,75 @@
 <ul>
 <li>修改主题的默认样式，自带的是muse样式，我选择改成Pisces</li>
 </ul>
-<p><img src="/home/tlntin/.config/Typora/typora-user-images/image-20200218184026634.png" alt="image-20200218184026634">    </p>
+<p><img src="/2020/02/18/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/image-20200218184026634.png" alt="image-20200218184026634">    </p>
 <ul>
 <li><p>修改主题菜单所对应的路径，需要修改home,tags,categories,archives。</p>
-<p><img src="/home/tlntin/.config/Typora/typora-user-images/image-20200218184324592.png" alt="image-20200218184324592"></p>
+<p><img src="/2020/02/18/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/image-20200218184324592.png" alt="image-20200218184324592"></p>
 </li>
 <li><p>其它修改方法请参考官网说明：<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a></p>
 </li>
 </ul>
-<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2>]]></content>
+<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><ol>
+<li>复制你的github上的ssh地址，点击use https,然后复制里面的内容。</li>
+</ol>
+<p><img src="/2020/02/18/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/image-20200218200735209.png" alt="image-20200218200735209"></p>
+<ol start="2">
+<li>配置站点部署文件。打开hexo根目录下的_config.yml</li>
+</ol>
+<p><img src="/2020/02/18/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/image-20200218200931953.png" alt="image-20200218200931953"></p>
+<ol start="3">
+<li>然后在最下面输入以下信息</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">'git'</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:xx/xx.github.io.git</span>  <span class="comment"># 这里替换成你的ssh地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>最后在hexo目录下，终端输入<code>hexo d</code>部署网页到github</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>Xpath</title>
+    <url>/2020/02/17/XPath/</url>
+    <content><![CDATA[<ul>
+<li>在XML文件中查找信息的一套规则/语言，根据XML的元素或者属性进行遍历。</li>
+</ul>
+<h2 id="Xpath-开发工具"><a href="#Xpath-开发工具" class="headerlink" title="Xpath 开发工具"></a>Xpath 开发工具</h2><ul>
+<li>开源表达式编辑工具：XMLQuire</li>
+<li>Chorme插件：Xpath Helper</li>
+</ul>
+<h2 id="选取节点"><a href="#选取节点" class="headerlink" title="选取节点"></a>选取节点</h2><ul>
+<li>nodename:选取此节点的所有节点</li>
+<li>/ :根节点</li>
+<li>// :选取节点，不考虑位置</li>
+<li>. ：选取当前节点</li>
+<li>.. ：选取当前节点的父节点</li>
+<li>@ ：选取属性</li>
+<li>/ :一般安装路径查找，表示它的子节点</li>
+<li>// :表示它的后代，包括子、孙<ul>
+<li>//Age[@Dtail] : 选取带Detail的Age元素</li>
+</ul>
+</li>
+<li>谓语-Predicates<ul>
+<li>/School/Student[1]  :选取School下面第一个节点</li>
+<li>/School/Student[last()]  : 选取School下面最后一个节点</li>
+<li>/School/Student[position()&lt;3]  : 选取School下面前三个节点</li>
+<li>//Student[@score=”99”]  选取属性带有99的节点</li>
+</ul>
+</li>
+</ul>
+<h2 id="Xpath的一些操作"><a href="#Xpath的一些操作" class="headerlink" title="Xpath的一些操作"></a>Xpath的一些操作</h2><ul>
+<li>| ：或者<ul>
+<li>//Student | //Teacher 2选1</li>
+</ul>
+</li>
+<li>其余不常见Xpath运算符合 +， - ，*， div, &gt;, &lt;</li>
+</ul>
+]]></content>
       <categories>
-        <category>教程</category>
+        <category>Python爬虫</category>
       </categories>
       <tags>
-        <tag>教程</tag>
+        <tag>python, 爬虫</tag>
       </tags>
   </entry>
   <entry>
@@ -713,51 +762,6 @@
       </categories>
       <tags>
         <tag>pythonWeb开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Xpath</title>
-    <url>/2020/02/17/XPath/</url>
-    <content><![CDATA[<ul>
-<li>在XML文件中查找信息的一套规则/语言，根据XML的元素或者属性进行遍历。</li>
-</ul>
-<h2 id="Xpath-开发工具"><a href="#Xpath-开发工具" class="headerlink" title="Xpath 开发工具"></a>Xpath 开发工具</h2><ul>
-<li>开源表达式编辑工具：XMLQuire</li>
-<li>Chorme插件：Xpath Helper</li>
-</ul>
-<h2 id="选取节点"><a href="#选取节点" class="headerlink" title="选取节点"></a>选取节点</h2><ul>
-<li>nodename:选取此节点的所有节点</li>
-<li>/ :根节点</li>
-<li>// :选取节点，不考虑位置</li>
-<li>. ：选取当前节点</li>
-<li>.. ：选取当前节点的父节点</li>
-<li>@ ：选取属性</li>
-<li>/ :一般安装路径查找，表示它的子节点</li>
-<li>// :表示它的后代，包括子、孙<ul>
-<li>//Age[@Dtail] : 选取带Detail的Age元素</li>
-</ul>
-</li>
-<li>谓语-Predicates<ul>
-<li>/School/Student[1]  :选取School下面第一个节点</li>
-<li>/School/Student[last()]  : 选取School下面最后一个节点</li>
-<li>/School/Student[position()&lt;3]  : 选取School下面前三个节点</li>
-<li>//Student[@score=”99”]  选取属性带有99的节点</li>
-</ul>
-</li>
-</ul>
-<h2 id="Xpath的一些操作"><a href="#Xpath的一些操作" class="headerlink" title="Xpath的一些操作"></a>Xpath的一些操作</h2><ul>
-<li>| ：或者<ul>
-<li>//Student | //Teacher 2选1</li>
-</ul>
-</li>
-<li>其余不常见Xpath运算符合 +， - ，*， div, &gt;, &lt;</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python爬虫</category>
-      </categories>
-      <tags>
-        <tag>python, 爬虫</tag>
       </tags>
   </entry>
   <entry>
