@@ -604,6 +604,384 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/21/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC2%E5%A4%A9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tlntin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Python博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/21/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC2%E5%A4%A9/" itemprop="url">python复习100天--第2天</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-21T15:00:24+08:00">
+                2020-02-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">python复习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Python基本数据类型"><a href="#Python基本数据类型" class="headerlink" title="Python基本数据类型"></a>Python基本数据类型</h2><h3 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h3><ul>
+<li><p>类型:int、float、bool、complex</p>
+</li>
+<li><p>数字的四则运算</p>
+<p>  eg:</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="number">1</span> + <span class="number">2</span>)  <span class="comment"># 整数相加得整数：3</span></span><br><span class="line">print(<span class="number">2.1</span> - <span class="number">1.1</span>)  <span class="comment"># 浮点数相减得浮点数:1.0</span></span><br><span class="line">print(<span class="number">1</span> * <span class="number">2</span>)  <span class="comment"># 整数相乘得整数:2</span></span><br><span class="line">print(<span class="number">2</span> / <span class="number">1</span>)  <span class="comment"># 整数相除得浮点数:2.0</span></span><br><span class="line">print(<span class="number">9</span> // <span class="number">2</span>)  <span class="comment"># 取整除法:4</span></span><br><span class="line">print(<span class="number">9</span> % <span class="number">2</span>)  <span class="comment"># 求余除法:1</span></span><br><span class="line">print(<span class="number">3</span> ** <span class="number">3</span>)  <span class="comment"># 求3的3次方:27</span></span><br></pre></td></tr></table></figure>
+
+<p>  一般来说，同类型的数字进行四则运算会得到同类型的数字，但是除法不是。因为除法可能会出现小数，所以一般在进行除法运算的时候，Python会自动把整数变成浮点数之后，再进行运算，所以，整数相除是浮点数。</p>
+</li>
+<li><p>数字的类型转换。</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="number">1</span> + <span class="number">1.1</span>)  <span class="comment"># 整数加小数得小数：2.1</span></span><br><span class="line">print(<span class="number">1</span> + <span class="literal">True</span>)  <span class="comment"># 整数加布尔型得整数:2</span></span><br><span class="line">print(<span class="number">1</span> + (<span class="number">2</span> + <span class="number">3j</span>))  <span class="comment"># 整数加复数得复数:3+3j</span></span><br></pre></td></tr></table></figure>
+
+<p>python会自动把低精度的往高精度上转换。如果是整数遇到了浮点数，整数自动转浮点数（浮点数能存储的东西多）；同样的，如果是整数遇到了布尔型，布尔型自动转整数（整数储存的数据比布尔型多）。整数与复数的转换规则也是如此。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 布尔型的转换规则</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">布尔转整数</span></span><br><span class="line"><span class="string">Ture -&gt;  1</span></span><br><span class="line"><span class="string">False -&gt; 0</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">print(int(<span class="literal">True</span>))  <span class="comment"># 布尔转整数:1</span></span><br><span class="line">print(int(<span class="literal">False</span>))  <span class="comment"># 布尔转整数：0</span></span><br><span class="line"><span class="comment"># int函数可以把其它数据类型转成整数</span></span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">整数转布尔</span></span><br><span class="line"><span class="string">非零-&gt; True</span></span><br><span class="line"><span class="string">0 -&gt; False</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">print(bool(<span class="number">10</span>))  <span class="comment"># 整数转布尔：True</span></span><br><span class="line">print(bool(<span class="number">-10</span>))  <span class="comment"># 整数转布尔：Ture</span></span><br><span class="line">print(bool(<span class="number">0</span>))  <span class="comment"># 整数转布尔：False</span></span><br></pre></td></tr></table></figure>
+
+<p>注：int函数可将数据转整数，float函数可以将数据转浮点型，bool函数将数据转布尔型，complex函数将数据转复数。</p>
+</li>
+</ul>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><ul>
+<li><p>字符串切片：上节已讲。具体可以看<a href="https://www.vbahome.cn" target="_blank" rel="noopener">https://www.vbahome.cn</a></p>
+</li>
+<li><p>关于反斜杠转义：如果不想让它转义，可以加一个r，代表raw，原生不动。这样反斜杠就不会转义了。</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">r'1\n2'</span>)  <span class="comment"># r代表不转义，此处输出：1\n2</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>常用字符串内置函数</p>
+<ul>
+<li><p>len:用于计算字符串的长度</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(len(<span class="string">'你好玛利亚'</span>))  <span class="comment"># 输出结果为５</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>常用字符串内置方法</p>
+<ul>
+<li><p>join: 可以使用特定的字符将一个序列拼(通常为元组和列表)接成一个字符串</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="string">'你好'</span>, <span class="string">','</span>, <span class="string">'玛利亚'</span>, <span class="string">'!'</span>]  <span class="comment"># 后面会讲list，这里只是一个示意</span></span><br><span class="line">a = <span class="string">''</span>.join(list1)  <span class="comment"># 利用空字符串把列表拼接成一个字符串</span></span><br><span class="line">print(a)  <span class="comment"># 输出结果:你好,玛利亚!</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<ul>
+<li><p>replace:用于查找特定的字符串并替换成新的字符串</p>
+</li>
+<li><pre><code class="python">a = <span class="string">'我爱你，湖南'</span>
+a = a.replace(<span class="string">'湖南'</span>, <span class="string">'中国'</span>)  <span class="comment"># 将湖南替换为中国，并且重新赋值给ａ</span>
+print(a)  <span class="comment"># 输出结果: 我爱你，中国</span>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- find:查找某个字符串是否在该字符串内，默认只返回第一个匹配的字符串的第一个字符所在位置.</span><br><span class="line"></span><br><span class="line">  &#96;&#96;&#96;python</span><br><span class="line">  a &#x3D; &#39;Hello world,Hello China&#39;</span><br><span class="line">  result1 &#x3D; a.find(&#39;Hello&#39;)  # 找Hello的位置,结果: 0</span><br><span class="line">  print(result1)</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+<li><p>split:以特定字符串进行切割，常用于语句分词，分词后的结果是一个列表．</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'Hello world,Hello China'</span></span><br><span class="line">print(a.split(<span class="string">' '</span>))  <span class="comment"># 以空格进行分词</span></span><br><span class="line"><span class="comment"># 输出结果：['Hello', 'world,Hello', 'China']</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>title: 将字符串标题化，也就是所有单词首字母大写</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'hello world,hello china'</span></span><br><span class="line">print(a.title())  <span class="comment"># 标题化输出</span></span><br><span class="line"><span class="comment"># 输出结果：Hello World,Hello China</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>upper:将单词的所有字母都变成大写</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'hello world,hello china'</span></span><br><span class="line">print(a.upper())  <span class="comment"># 小写单词转大写</span></span><br><span class="line"><span class="comment"># 输出结果：HELLO WORLD,HELLO CHINA</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>lower: 将所有单词大写转小写</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'HELLO WORLD,HELLO CHINA'</span></span><br><span class="line">print(a.lower())  <span class="comment"># 大写单词转小写</span></span><br><span class="line"><span class="comment"># 输出结果：hello world,hello china</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>startwith: 是否以某个字符串开头，返回值为布尔型</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'hello world,hello china'</span></span><br><span class="line">print(a.startswith(<span class="string">'hello'</span>))  <span class="comment"># 判断是否以hello开头</span></span><br><span class="line"><span class="comment"># 输出结果：True</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>endswith: 是否以某个字符结尾，返回值为布尔型</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'hello world,hello china'</span></span><br><span class="line">print(a.endswith(<span class="string">'china'</span>))  <span class="comment"># 判断是否以hello开头</span></span><br><span class="line"><span class="comment"># 输出结果：True</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>strip: 删除两边多余的字符，默认是删除空格</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'  hello world,hello china  '</span></span><br><span class="line">print(a.strip())  <span class="comment"># 删除两边的空格</span></span><br><span class="line">print(a.strip().strip(<span class="string">'a'</span>))  <span class="comment"># 删完空格再删两边的字符a</span></span><br><span class="line"><span class="comment"># 输出结果：</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">hello world,hello china</span></span><br><span class="line"><span class="string">hello world,hello chin</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>encode:将字符串编码，默认是utf-8</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'  hello world,hello china  '</span></span><br><span class="line">print(a.encode(<span class="string">'utf-8'</span>))  <span class="comment"># 默认是utf-8,可以不填</span></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">b'  hello world,hello china  '</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<p>上面多了一个b,代表是二进制格式.</p>
+</li>
+<li><p>decode:将二进制解码成字符串,默认用utf-8进行解码</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">b'  hello world,hello china  '</span></span><br><span class="line">b = <span class="string">b'\xe6\x88\x91\xe7\x88\xb1Python'</span></span><br><span class="line">print(a.decode())  <span class="comment"># 默认是utf-8,可以不填</span></span><br><span class="line">print(b.decode(<span class="string">'utf-8'</span>))</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">  hello world,hello china  </span></span><br><span class="line"><span class="string">我爱Python</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>字符串的复制</p>
+<ul>
+<li><p>字符串常用*号代表复制,后面接数字代表复制多少次</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'hello'</span></span><br><span class="line">print(a*<span class="number">10</span>)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">hellohellohellohellohellohellohellohellohellohello</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>字符串转数字</p>
+<ul>
+<li><p>如果是数字构成的字符串，可以将该字符串转成浮点型数字</p>
+</li>
+<li><p>注意：<strong>字符串只能转浮点型数字，不能转整数形</strong></p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'1.0'</span></span><br><span class="line">b = <span class="string">'2'</span></span><br><span class="line">print(type(a))</span><br><span class="line">print(type(b))</span><br><span class="line">c = float(a)</span><br><span class="line">d = float(b)</span><br><span class="line">print(type(c))</span><br><span class="line">print(type(d))</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&lt;class 'str'&gt;</span></span><br><span class="line"><span class="string">&lt;class 'str'&gt;</span></span><br><span class="line"><span class="string">&lt;class 'float'&gt;</span></span><br><span class="line"><span class="string">&lt;class 'float'&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>数字转字符串</p>
+<ul>
+<li><p>直接用str函数即可</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span></span><br><span class="line">print(type(<span class="number">1</span>))</span><br><span class="line">b = str(<span class="number">1</span>)</span><br><span class="line">print(type(b))</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&lt;class 'int'&gt;</span></span><br><span class="line"><span class="string">&lt;class 'str'&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><ul>
+<li><p>list:代表多个有序数据的集合</p>
+</li>
+<li><p>列表是有序的,  每个列表元素都有一个“序号”，一般称为索引</p>
+</li>
+<li><p>索引是从零开始,然后依次加1</p>
+</li>
+<li><p>想要获取列表的元素,需要用中括号加索引的位置</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">print(a[<span class="number">1</span>])  <span class="comment"># 取第二个索引所在的元素值</span></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">2</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列表的创建方法</p>
+<ul>
+<li>法一:  和上面一样用中括号然后加逗号隔开</li>
+<li>法二:   利用list函数生成列表</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">a = list()  <span class="comment"># 创建一个空列表</span></span><br><span class="line">b = list(<span class="string">'ashofsdo'</span>)  <span class="comment"># 将字符串变成列表,默认一个字符串一个列表元素</span></span><br><span class="line">print(a)</span><br><span class="line">print(b)</span><br><span class="line">print(type(a))</span><br><span class="line">print(type(b))</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">[]</span></span><br><span class="line"><span class="string">['a', 's', 'h', 'o', 'f', 's', 'd', 'o']</span></span><br><span class="line"><span class="string">&lt;class 'list'&gt;</span></span><br><span class="line"><span class="string">&lt;class 'list'&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列表常搭配的函数:range</p>
+<ul>
+<li>range函数用于生成一个数字范围，一般以零开始,需要用list转成列表</li>
+<li>range生成的数字范围可迭代，常用于循环(此处不需要过于理解)</li>
+</ul>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">a = range(<span class="number">10</span>)  <span class="comment"># 生成一个从零开始到10结束的范围,不包括10</span></span><br><span class="line">a_list = list(a)  <span class="comment"># 将该范围转为列表</span></span><br><span class="line">print(a)</span><br><span class="line">print(type(a))</span><br><span class="line">print(a_list)</span><br><span class="line">print(type(a_list))</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">range(0, 10)</span></span><br><span class="line"><span class="string">&lt;class 'range'&gt;</span></span><br><span class="line"><span class="string">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"><span class="string">&lt;class 'list'&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>range可以自定义开头位置，用逗号隔开</li>
+</ul>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = list(range(<span class="number">1</span>, <span class="number">10</span>))  <span class="comment"># 从1开始,到10结束,不包括10</span></span><br><span class="line">print(a)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">[1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>range可以自定义步长,默认是1,可以加一个逗号,第二个逗号右边表示步长.</li>
+</ul>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = list(range(<span class="number">1</span>, <span class="number">30</span>, <span class="number">3</span>))  <span class="comment"># 从1开始,到30结束,不包括30,每隔3取一个</span></span><br><span class="line">print(a)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">[1, 4, 7, 10, 13, 16, 19, 22, 25, 28]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列表的切片</p>
+<ul>
+<li>切片方法和字符串一样的</li>
+<li>切片后可以重新赋值(注意:只有字符串、列表,、字典可以重新赋值)</li>
+</ul>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">a = list(range(<span class="number">1</span>, <span class="number">10</span>))  <span class="comment"># 从1开始,到30结束,不包括30,每隔3取一个</span></span><br><span class="line">print(<span class="string">'原来的a为: \n'</span>, a)</span><br><span class="line">a[<span class="number">0</span>] = <span class="number">100</span>  <span class="comment"># 对a[0]重新赋值</span></span><br><span class="line">print(<span class="string">'重新赋值后的a为:\n'</span>, a)</span><br><span class="line">print(a[<span class="number">0</span>:<span class="number">5</span>])  <span class="comment"># 取第一个到第5个值,不包括a[5],也就是不包括第6个值</span></span><br><span class="line">print(a[<span class="number">0</span>:<span class="number">7</span>:<span class="number">2</span>])  <span class="comment"># 从第一个取到第7个,不包括a[7],每隔两个取一个</span></span><br><span class="line">print(a[<span class="number">-5</span>: <span class="number">-1</span>: <span class="number">2</span>])  <span class="comment"># 从倒数第五个取到倒数第一个,不包括倒数第一个,每隔两个取一个</span></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">原来的a为: </span></span><br><span class="line"><span class="string"> [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"><span class="string">重新赋值后的a为:</span></span><br><span class="line"><span class="string"> [100, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"><span class="string">[100, 2, 3, 4, 5]</span></span><br><span class="line"><span class="string">[100, 3, 5, 7]</span></span><br><span class="line"><span class="string">[5, 7]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列表的常用函数</p>
+<ul>
+<li><p>len:计算列表中元素的个数</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = list(range(<span class="number">10</span>))</span><br><span class="line">  print(len(a))</span><br></pre></td></tr></table></figure>
+<h1 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h1><p>“””<br>10<br>“””</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">- max:找到列表中的最大值</span><br><span class="line"></span><br><span class="line">- min函数代表找到列表中的最小元素</span><br><span class="line"></span><br><span class="line">  eg:</span><br><span class="line"></span><br><span class="line">  &#96;&#96;&#96;python</span><br><span class="line">  a &#x3D; list(range(10))</span><br><span class="line">  print(max(a))</span><br><span class="line">  print(min(a))</span><br><span class="line">  # 输出结果</span><br><span class="line">  &quot;&quot;&quot;</span><br><span class="line">  9</span><br><span class="line">  0</span><br><span class="line">  &quot;&quot;&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>列表的常用方法</p>
+<ul>
+<li><p>append:末尾追加元素</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = list(range(<span class="number">10</span>))</span><br><span class="line">a.append(<span class="number">11</span>)</span><br><span class="line">print(a)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>copy函数，常用于列表的复制，防止新列表更新后污染旧的列表。</p>
+<p>eg:</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  a = list(range(<span class="number">10</span>))</span><br><span class="line">  b = a.copy()  <span class="comment"># 复制列表a</span></span><br><span class="line">  b[<span class="number">0</span>] = <span class="number">100</span></span><br><span class="line">  print(a)</span><br><span class="line">  print(b)</span><br><span class="line">  <span class="comment"># 输出结果</span></span><br><span class="line">  <span class="string">"""</span></span><br><span class="line"><span class="string">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"><span class="string">  [100, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>insert: 在置顶的位置插入元素</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = list(range(<span class="number">10</span>))</span><br><span class="line">a.insert(<span class="number">4</span>, <span class="number">100</span>)  <span class="comment"># 在第五个索引后面插入100</span></span><br><span class="line">print(a)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">[0, 1, 2, 3, 100, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>index: 找到某个元素所匹配的索引位置</p>
+<p>eg:</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  a = [<span class="string">'张三'</span>, <span class="string">'李四'</span>, <span class="string">'王二小'</span>]</span><br><span class="line">  print(a.index(<span class="string">'李四'</span>))</span><br><span class="line">  b = [<span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">4</span>]</span><br><span class="line">  print(b.index(max(b)))  <span class="comment"># 先找到b的最大值，再找到最大值对应的索引</span></span><br><span class="line">  <span class="comment"># 输出结果</span></span><br><span class="line">  <span class="string">"""</span></span><br><span class="line"><span class="string">  1</span></span><br><span class="line"><span class="string">4</span></span><br><span class="line"><span class="string">  """</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>sort: 对列表进行排序</p>
+<p>  eg:</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">b = [<span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">4</span>]</span><br><span class="line">b.sort()  <span class="comment"># 对b进行排序</span></span><br><span class="line">print(b)  </span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">[1, 2, 4, 5, 6, 9]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>reverse：对列表进行反转</p>
+<p>eg:</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">b = [<span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">4</span>]</span><br><span class="line">b.reverse()  <span class="comment"># 对b进行反转</span></span><br><span class="line">print(b)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">[4, 9, 6, 5, 1, 2]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>pop: 删除元素，默认删除最后一个元素</p>
+<p>eg:</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">  b = [<span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">4</span>]</span><br><span class="line">  print(<span class="string">'原始的b列表长这样:\n'</span>, b)</span><br><span class="line">  b.pop()  <span class="comment"># 删除最后一个元素</span></span><br><span class="line">  print(<span class="string">'删除最右边的元素后\n'</span>, b)</span><br><span class="line">  b.pop(<span class="number">0</span>)  <span class="comment"># 删除第一元素</span></span><br><span class="line">  print(<span class="string">'删除第一个元素后的样子:'</span>)</span><br><span class="line">  print(b)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line">  <span class="string">"""</span></span><br><span class="line"><span class="string">原始的b列表长这样:</span></span><br><span class="line"><span class="string">   [2, 1, 5, 6, 9, 4]</span></span><br><span class="line"><span class="string">删除最右边的元素后</span></span><br><span class="line"><span class="string">   [2, 1, 5, 6, 9]</span></span><br><span class="line"><span class="string">  删除第一个元素后的样子:</span></span><br><span class="line"><span class="string">  [1, 5, 6, 9]</span></span><br><span class="line"><span class="string">  """</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>remove函数，用于删除特定的元素，pop是删索引，注意两者区别。</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">b = [<span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">4</span>]</span><br><span class="line">print(<span class="string">'原始的b列表长这样:\n'</span>, b)</span><br><span class="line">b.remove(<span class="number">5</span>)  <span class="comment"># 删除元素5</span></span><br><span class="line">print(<span class="string">'第一次删除后\n'</span>, b)</span><br><span class="line">b.remove(<span class="number">6</span>)  <span class="comment"># 删除元素6</span></span><br><span class="line">print(<span class="string">'第二次删除后:'</span>)</span><br><span class="line">print(b)</span><br></pre></td></tr></table></figure>
+<h1 id="输出结果-1"><a href="#输出结果-1" class="headerlink" title="输出结果"></a>输出结果</h1><p>“””<br>原始的b列表长这样:<br> [2, 1, 5, 6, 9, 4]<br>第一次删除后<br> [2, 1, 6, 9, 4]<br>第二次删除后:<br>[2, 1, 9, 4]<br>“””</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="方法和函数的区别"><a href="#方法和函数的区别" class="headerlink" title="方法和函数的区别"></a>方法和函数的区别</h3><ul>
+<li><p>方法是一种特殊的函数</p>
+</li>
+<li><p>方法属于某一个对象(数字、列表、字符串都可以看成对象，后面会仔细讲)，而函数可以单独存在</p>
+<p>eg:如列表的pop方法只有列表才可以用，而max函数可以直接使用</p>
+</li>
+<li><p>方法使用：obeject.funciton()，函数的使用：funciton()</p>
+</li>
+<li><p>方法包含的参数中,一定有一个参数是对象本身</p>
+<p>eg:如sort方法实际就是对它自身进行排序,可以看成是list.sort(self)，self代表它本身.</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/20/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC1%E5%A4%A9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -862,9 +1240,9 @@
 <ul>
 <li><p>输出不换行, print函数里面有个参数是<code>end=&#39;\n&#39;</code>，\n代表回车。</p>
 </li>
-<li><p>想要不会车输出，可以用空格或者其它字符代替</p>
+<li><p>想要不回车输出，可以用空格或者其它字符代替</p>
 <p>eg:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'1'</span>, end=<span class="string">' '</span>)</span><br><span class="line">print(<span class="string">'2'</span>, end=<span class="string">''</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'1'</span>, end=<span class="string">' '</span>)</span><br><span class="line">print(<span class="string">'2'</span>, end=<span class="string">' '</span>)</span><br></pre></td></tr></table></figure>
 
 <p>输出结果：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
@@ -912,6 +1290,503 @@
 </ul>
 <h2 id="未完待续。。。。"><a href="#未完待续。。。。" class="headerlink" title="未完待续。。。。"></a>未完待续。。。。</h2><ul>
 <li>博客首发，地址：<a href="https://www.vbahome.cn" target="_blank" rel="noopener">https://www.vbahome.cn</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tlntin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Python博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/" itemprop="url">Boss直聘爬虫实战</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-18T21:00:00+08:00">
+                2020-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python%E7%88%AC%E8%99%AB/" itemprop="url" rel="index">
+                    <span itemprop="name">Python爬虫</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li><p>新建项目-新建PythonFile</p>
+</li>
+<li><p>安装爬虫模块</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>requests的常用函数</p>
+<ul>
+<li>request.get()，对应http协议的get请求，也就是把网页下载下来。</li>
+<li>request.post()，对应Http协议的post请求，就是把数据上传到网页服务器。</li>
+</ul>
+</li>
+<li><p>观察boss直聘的url。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.zhipin.com/c101250100-p110101/</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>通过观察发现，后面应该是城市代码和职位代码</li>
+<li>通过检查-network发现，城市代码应该是储存在city.json里面</li>
+<li>职位代码应该是储存在position.json里面</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220212318163.png" alt="image-20200220212318163"></p>
+<p><img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220212422591.png" alt="image-20200220212422591"></p>
+<p>通过观察：city.json的url为</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.zhipin.com/wapi/zpCommon/data/city.json</span><br></pre></td></tr></table></figure>
+
+<p>postion.json的url为</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.zhipin.com/wapi/zpCommon/data/position.json</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220212709237.png" alt="image-20200220212709237"></p>
+<h2 id="爬取城市代码"><a href="#爬取城市代码" class="headerlink" title="爬取城市代码"></a>爬取城市代码</h2><ul>
+<li><p>测试连接</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="comment"># requests--&gt;请求</span></span><br><span class="line">url = <span class="string">'https://www.zhipin.com/wapi/zpCommon/data/city.json'</span>  <span class="comment"># boss直聘城市链接</span></span><br><span class="line">response = requests.get(url)  </span><br><span class="line">print(response)  <span class="comment"># 打印响应</span></span><br></pre></td></tr></table></figure>
+
+<p>返回值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Response [<span class="number">200</span>]&gt;</span><br></pre></td></tr></table></figure>
+
+<p>200：代表返回成功</p>
+<p>404：网络连接失败</p>
+<p>500：服务器奔溃</p>
+</li>
+<li><p>加入浏览器伪装头’user-agent’，防止被服务器发现你是爬虫</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">headers = &#123;<span class="string">'user-agent'</span>: <span class="string">'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36'</span>&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第一次打印</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br><span class="line">url = <span class="string">'https://www.zhipin.com/wapi/zpCommon/data/city.json'</span>  <span class="comment"># boss直聘城市代码</span></span><br><span class="line">headers = &#123;<span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (X11; Linux x86_64) \</span></span><br><span class="line"><span class="string">AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36'</span>&#125;</span><br><span class="line">response = requests.get(url, headers=headers)</span><br><span class="line">data = response.json()  <span class="comment"># 从返回对象中提取json</span></span><br><span class="line">pprint(data)</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<p><img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220223601456.png" alt="image-20200220223601456"></p>
+<p>根据上图观察，返回的json可以当成是一个多层字典。</p>
+</li>
+</ul>
+<p>  数据均在<code>zpData\cityList</code>下，于是对zpData进行第一次解包。</p>
+<p>  <img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220230905431.png" alt="image-20200220230905431"></p>
+<p>  对cityList进行第二次解包。</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br><span class="line">url = <span class="string">'https://www.zhipin.com/wapi/zpCommon/data/city.json'</span>  <span class="comment"># boss直聘城市代码</span></span><br><span class="line">headers = &#123;<span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (X11; Linux x86_64) \</span></span><br><span class="line"><span class="string">AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36'</span>&#125;</span><br><span class="line">response = requests.get(url, headers=headers)</span><br><span class="line">data = response.json()  <span class="comment"># 从返回对象中提取json</span></span><br><span class="line">data1 = data[<span class="string">'zpData'</span>][<span class="string">'cityList'</span>]</span><br><span class="line"><span class="comment"># pprint(data1)</span></span><br><span class="line"><span class="keyword">for</span> ii <span class="keyword">in</span> data1:</span><br><span class="line">    province = ii[<span class="string">'name'</span>]  <span class="comment"># 省名</span></span><br><span class="line">    province_code = ii[<span class="string">'code'</span>]  <span class="comment"># 省对应的代码</span></span><br><span class="line">    city_list = ii[<span class="string">'subLevelModelList'</span>]</span><br><span class="line">    <span class="keyword">for</span> ci <span class="keyword">in</span> city_list:</span><br><span class="line">      city = ci[<span class="string">'name'</span>]  <span class="comment"># 城市名</span></span><br><span class="line">        city_code = ci[<span class="string">'code'</span>]  <span class="comment"># 城市代码</span></span><br><span class="line">      print(province, <span class="string">'\t'</span>, province_code, <span class="string">'\t'</span>, city, <span class="string">'\t'</span>, city_code)</span><br></pre></td></tr></table></figure>
+
+<p>  <img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220230342508.png" alt="image-20200220230342508"></p>
+<p>  省和城市代码就爬取完毕了，直接粘贴到excel就可以。至于如何直接导出excel，后面再说。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tlntin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Python博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" itemprop="url">网易云网课记录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-18T10:00:00+08:00">
+                2020-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index">
+                    <span itemprop="name">python基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><ul>
+<li><p>简称为OOP（Object Oriented Programming）</p>
+</li>
+<li><p>python中每一个值都是一个对象，整数、浮点数、字符串、列表都是对象</p>
+</li>
+<li><p>面向对象编程值得就是一个或者对个对象交互的概念</p>
+</li>
+<li><p>对象允许我们对现实世界中的概念进行建模</p>
+<p>eg :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">March_list = [<span class="number">541</span>, <span class="number">600</span>, <span class="number">200</span>, <span class="number">500.</span>..]  <span class="comment"># 这个列表记录了博物馆31天的参观人数</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对象应包括数据（包含数字或者字符串）加上可以操作的运行（下面介绍类别的时候详细介绍这里）。</p>
+</li>
+</ul>
+<h2 id="类别"><a href="#类别" class="headerlink" title="类别"></a>类别</h2><ul>
+<li><p>每一个对象都属于一个类别</p>
+<p>eg:  张三是一个自行车工厂的工人，它可以制造自行车，它属于自行车制造者。</p>
+</li>
+</ul>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><ul>
+<li><p>每一个类别都有自己的属性</p>
+<p>eg: 对于一辆自行车，它的颜色，尺寸，类型都可以作为他的属性</p>
+</li>
+</ul>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
+<li><p>每一个类别都应该有自己的方法，它是一个可以应用与对象的结果逻辑序列。</p>
+<ul>
+<li><p>对象的方法可以是一个指令</p>
+<p>eg：对于自行车，它的方法可能是向左转，向右转，减速，加速</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">objects.turn_left()  <span class="comment"># 向左转</span></span><br><span class="line">objects.turn_right()  <span class="comment"># 向右转</span></span><br><span class="line">objects.slow_down()  <span class="comment"># 减速</span></span><br><span class="line">objects.accelerate()  <span class="comment"># 加速</span></span><br></pre></td></tr></table></figure>
+
+<p>eg2: 创建一个列表（列表也是对象）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="number">15</span>, <span class="number">12</span>, <span class="number">64</span>]  <span class="comment"># 实例化列表对象，这个对象属于列表类别</span></span><br><span class="line"><span class="comment"># 它的一个属性就是它的元素的数据类型，子元素属于整数。</span></span><br><span class="line">list1.extend([<span class="number">5</span>,<span class="number">6</span>, <span class="number">7</span>])  <span class="comment"># 扩展是列表对象的一个方法</span></span><br><span class="line">print(list1)</span><br><span class="line">list1.append(<span class="number">8</span>)  <span class="comment"># 追加也是列表对象的一个方法</span></span><br><span class="line">print(list1)</span><br></pre></td></tr></table></figure>
+
+<p>输出结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">15</span>, <span class="number">12</span>, <span class="number">64</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>]</span><br><span class="line">[<span class="number">15</span>, <span class="number">12</span>, <span class="number">64</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>]</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="方法与函数"><a href="#方法与函数" class="headerlink" title="方法与函数"></a>方法与函数</h3><table>
+<thead>
+<tr>
+<th align="center">区别</th>
+<th align="center">方法</th>
+<th align="center">函数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">方法是一种特别的函数</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">方法包含的参数中，一定有一个参数是对象本身</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">方法属于某个类别，而函数可以独立存在</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">objects.function()</td>
+<td align="center">function()</td>
+</tr>
+</tbody></table>
+<p>eg: 对于自行车的向左转方法，如果没有自行车这个对象，那么向左转也就不成立了。</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">bike</span><span class="params">(color, size)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    定义一个类别：自行车</span></span><br><span class="line"><span class="string">    自行车包含两个属性，color:颜色，size:大小</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">turn_left</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        定义一个方法，向左转</span></span><br><span class="line"><span class="string">        它属于自行车这个类。</span></span><br><span class="line"><span class="string">        它包含了基本参数:self，self代表自行车这个对象</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">bike1 = bike(color=<span class="string">'红色'</span>, size=<span class="number">22</span>)  <span class="comment"># 实例化自行车这个类。</span></span><br><span class="line"><span class="comment"># 代表创建一个红色的，大小为22的自行车</span></span><br><span class="line">bike1.turn_left() <span class="comment"># 控制自行车往左转。self参数代表对象本身，使用的时候一般省略。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><ul>
+<li><p>模块是一种预写代码，包含变量的定义，函数和类别</p>
+</li>
+<li><p>它可以十分方便的加载到新的程序当中，可以帮我们省略很多代码。</p>
+</li>
+<li><p>导入模块的五种方法</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math  <span class="comment"># 导入math模块</span></span><br><span class="line">print(math.sqrt(<span class="number">4</span>))  <span class="comment"># 计算４的平方根</span></span><br></pre></td></tr></table></figure>
+
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt  <span class="comment"># 从math模块中导入sqrt函数</span></span><br><span class="line">print(sqrt(<span class="number">4</span>))  <span class="comment"># 计算４的平方根</span></span><br></pre></td></tr></table></figure>
+
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt <span class="keyword">as</span> s  </span><br><span class="line"><span class="comment"># 从math模块中导入sqrt函数,并且给它一个简称为s</span></span><br><span class="line">print(s(<span class="number">4</span>))  <span class="comment"># 计算４的平方根</span></span><br></pre></td></tr></table></figure>
+
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math <span class="keyword">as</span> s  <span class="comment"># 导入math模块并且给一个别称为s</span></span><br><span class="line">print(s.sqrt(<span class="number">4</span>))  <span class="comment"># 计算４的平方根</span></span><br></pre></td></tr></table></figure>
+
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> *  <span class="comment"># 从math模块中导所有函数</span></span><br><span class="line">print(sqrt(<span class="number">4</span>))  <span class="comment"># 计算４的平方根</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="包"><a href="#包" class="headerlink" title="包"></a>包</h2><ul>
+<li><p>包是相关python代码的集合，可以简单理解为模块的集合就是包</p>
+<p>包-&gt;模块-&gt;类-&gt;函数</p>
+</li>
+</ul>
+<h2 id="python标准模块库"><a href="#python标准模块库" class="headerlink" title="python标准模块库"></a>python标准模块库</h2><ul>
+<li>当前可用模块的集合</li>
+</ul>
+<h2 id="Python常用数据分析库"><a href="#Python常用数据分析库" class="headerlink" title="Python常用数据分析库"></a>Python常用数据分析库</h2><ul>
+<li>numpy</li>
+<li>pandas</li>
+<li>matplotlib    # 可视化工具</li>
+<li>scipy   # 三合一工具包</li>
+<li>statsmodels  # 包含描述性统计</li>
+</ul>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
+<li><p>数组是任何编程语言中的基本数据结构</p>
+</li>
+<li><p>数据可以把数据组织成向量、矩阵和其它多维对象</p>
+</li>
+<li><p>数组中的对象称为数组元素</p>
+</li>
+<li><p>数组和列表的最大区别就是，数组中的数组元素都必须为相同数据类型。而列表可能同时包含整数，字符串，浮点数。</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a = np.array([[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]])</span><br><span class="line">print(a)</span><br><span class="line">print(type(a))</span><br></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="number">0</span> <span class="number">1</span> <span class="number">2</span>]</span><br><span class="line"> [<span class="number">4</span> <span class="number">5</span> <span class="number">6</span>]]</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">numpy</span>.<span class="title">ndarray</span>'&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>ndarray</code>: Numpy n-dimensional array :代表Numpy的N维数组。</p>
+</li>
+<li><p>查看形状</p>
+<p>eg</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(a.shape)  <span class="comment"># 结果是(2, 3)  # 代表两行三列</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>访问位置</p>
+<p>eg</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(a[<span class="number">1</span>, <span class="number">1</span>])  <span class="comment"># 打印第二行第二列，结果是5</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果只输入一个索引，默认为行索引</p>
+<p>eg：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(a[<span class="number">0</span>])  <span class="comment"># 提取第一行的数据</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果</span></span><br><span class="line"><span class="string">[0 1 2]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>一维数组(也称为向量)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">b = np.array([<span class="number">3</span>, <span class="number">5</span>])</span><br><span class="line">print(b)</span><br><span class="line"><span class="comment"># [3, 5]  可以看出数学向量的（3,5）</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>二位数组，也称为矩阵</p>
+</li>
+<li><p>numpy生成数组</p>
+<p>eg</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">c = np.random.randint(<span class="number">1</span>, <span class="number">6</span>, [<span class="number">4</span>, <span class="number">6</span>])</span><br><span class="line"><span class="comment"># 生成一个随机整数（整数卫于1,6之间）构成的一个4*6的矩阵</span></span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="number">5</span> <span class="number">1</span> <span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">3</span>]</span><br><span class="line"> [<span class="number">1</span> <span class="number">2</span> <span class="number">2</span> <span class="number">1</span> <span class="number">4</span> <span class="number">1</span>]</span><br><span class="line"> [<span class="number">4</span> <span class="number">4</span> <span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">3</span>]</span><br><span class="line"> [<span class="number">4</span> <span class="number">2</span> <span class="number">1</span> <span class="number">1</span> <span class="number">5</span> <span class="number">1</span>]]</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
 </ul>
 
           
@@ -2306,182 +3181,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/10/Python%E5%8F%98%E9%87%8F%E5%9F%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tlntin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Python博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/10/Python%E5%8F%98%E9%87%8F%E5%9F%9F/" itemprop="url">Python变量域</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-10T15:30:00+08:00">
-                2020-02-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index">
-                    <span itemprop="name">python基础</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h2><ul>
-<li>变量由作用域限制<ul>
-<li>分类：按照作用域分类<ul>
-<li>全局（global）:在函数外部定义</li>
-<li>局部（local）：在函数内部定义</li>
-</ul>
-</li>
-<li>变量的作用范围：<ul>
-<li>全局变量：在整个全局范围都有效</li>
-<li>全局变量可以在局部使用</li>
-<li>局部变量在全局范围无法使用。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>LEGB原则<ul>
-<li>L(Local)局部作用域</li>
-<li>E(Enclosing function local)外部嵌套作用域</li>
-<li>G(Global module)函数定义所在模块作用域</li>
-<li>B(Build in)python内置模块的作用域。</li>
-</ul>
-</li>
-</ul>
-<h2 id="局部变量提升为全局变量"><a href="#局部变量提升为全局变量" class="headerlink" title="局部变量提升为全局变量"></a>局部变量提升为全局变量</h2><ul>
-<li><p>利用global生效。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a1 = <span class="number">0</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> a2</span><br><span class="line">    a2 = <span class="number">2</span></span><br><span class="line">fun()</span><br><span class="line">print(a2)  <span class="comment">#打印结果为2</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="globals-locals函数"><a href="#globals-locals函数" class="headerlink" title="globals, locals函数"></a>globals, locals函数</h2><ul>
-<li>可以通过globals和locals显示出局部变量和全局变量</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
+
 
 
           </div>
@@ -2525,7 +3231,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
