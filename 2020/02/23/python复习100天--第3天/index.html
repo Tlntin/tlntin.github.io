@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="python,爬虫," />
+  <meta name="keywords" content="python,基础," />
 
 
 
@@ -79,25 +79,18 @@
 
 
 
-<meta name="description" content="准备工作 新建项目-新建PythonFile  安装爬虫模块 1pip install requests  requests的常用函数  request.get()，对应http协议的get请求，也就是把网页下载下来。 request.post()，对应Http协议的post请求，就是把数据上传到网页服务器。   观察boss直聘的url。 1https:&#x2F;&#x2F;www.zhipin.com&#x2F;c101">
+<meta name="description" content="Python基本数据类型字典 字典是一种映射类型，字典用 { } 标识，它是一个无序的 键(key) : 值(value) 的集合。  在同一个字典中，键(key)必须是唯一的。  字典中键所对应的值是可变的  字典的创建方法：  法1：直接用中括号，冒号左边为键，冒号右边为值，多个键和值则用逗号隔开  1a &#x3D; &amp;#123;&#39;key1&#39;: &#39;你好&#39;, &#39;key2&#39;: &#39;我好&#39;, &#39;key3&#39;:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Boss直聘爬虫实战">
-<meta property="og:url" content="http://yoursite.com/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/index.html">
+<meta property="og:title" content="python复习100天--第3天">
+<meta property="og:url" content="http://yoursite.com/2020/02/23/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC3%E5%A4%A9/index.html">
 <meta property="og:site_name" content="Python博客">
-<meta property="og:description" content="准备工作 新建项目-新建PythonFile  安装爬虫模块 1pip install requests  requests的常用函数  request.get()，对应http协议的get请求，也就是把网页下载下来。 request.post()，对应Http协议的post请求，就是把数据上传到网页服务器。   观察boss直聘的url。 1https:&#x2F;&#x2F;www.zhipin.com&#x2F;c101">
-<meta property="og:image" content="http://yoursite.com/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220212318163.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220212422591.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220212709237.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220223601456.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220230905431.png">
-<meta property="og:image" content="http://yoursite.com/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220230342508.png">
-<meta property="article:published_time" content="2020-02-18T13:00:00.000Z">
-<meta property="article:modified_time" content="2020-02-21T09:32:46.527Z">
+<meta property="og:description" content="Python基本数据类型字典 字典是一种映射类型，字典用 { } 标识，它是一个无序的 键(key) : 值(value) 的集合。  在同一个字典中，键(key)必须是唯一的。  字典中键所对应的值是可变的  字典的创建方法：  法1：直接用中括号，冒号左边为键，冒号右边为值，多个键和值则用逗号隔开  1a &#x3D; &amp;#123;&#39;key1&#39;: &#39;你好&#39;, &#39;key2&#39;: &#39;我好&#39;, &#39;key3&#39;:">
+<meta property="article:published_time" content="2020-02-23T11:00:24.000Z">
+<meta property="article:modified_time" content="2020-02-23T12:33:14.310Z">
 <meta property="article:author" content="Tlntin">
 <meta property="article:tag" content="python">
-<meta property="article:tag" content="爬虫">
+<meta property="article:tag" content="基础">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220212318163.png">
 
 
 
@@ -127,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/02/18/Boss直聘爬虫实战/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/02/23/python复习100天--第3天/"/>
 
 
 
 
 
-  <title>Boss直聘爬虫实战 | Python博客</title>
+  <title>python复习100天--第3天 | Python博客</title>
   
 
 
@@ -294,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/23/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC3%E5%A4%A9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tlntin">
@@ -311,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Boss直聘爬虫实战</h1>
+          <h1 class="post-title" itemprop="name headline">python复习100天--第3天</h1>
         
 
         <div class="post-meta">
@@ -323,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-18T21:00:00+08:00">
-                2020-02-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-23T19:00:24+08:00">
+                2020-02-23
               </time>
             
 
@@ -346,8 +339,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python%E7%88%AC%E8%99%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">Python爬虫</span>
+                  <a href="/categories/python%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">python复习</span>
                   </a>
                 </span>
 
@@ -388,66 +381,139 @@
       
 
       
-        <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
-<li><p>新建项目-新建PythonFile</p>
+        <h2 id="Python基本数据类型"><a href="#Python基本数据类型" class="headerlink" title="Python基本数据类型"></a>Python基本数据类型</h2><h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><ul>
+<li><p>字典是一种映射类型，字典用 <strong>{ }</strong> 标识，它是一个无序的 <strong>键(key) : 值(value)</strong> 的集合。</p>
 </li>
-<li><p>安装爬虫模块</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+<li><p>在同一个字典中，键(key)必须是唯一的。</p>
 </li>
-<li><p>requests的常用函数</p>
+<li><p>字典中键所对应的值是可变的</p>
+</li>
+<li><p>字典的创建方法：</p>
 <ul>
-<li>request.get()，对应http协议的get请求，也就是把网页下载下来。</li>
-<li>request.post()，对应Http协议的post请求，就是把数据上传到网页服务器。</li>
+<li>法1：直接用中括号，冒号左边为键，冒号右边为值，多个键和值则用逗号隔开</li>
 </ul>
-</li>
-<li><p>观察boss直聘的url。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.zhipin.com/c101250100-p110101/</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">'key1'</span>: <span class="string">'你好'</span>, <span class="string">'key2'</span>: <span class="string">'我好'</span>, <span class="string">'key3'</span>: <span class="string">'大家好'</span>&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>通过观察发现，后面应该是城市代码和职位代码</li>
-<li>通过检查-network发现，城市代码应该是储存在city.json里面</li>
-<li>职位代码应该是储存在position.json里面</li>
+<li>法2：通过dict函数创建字典，把key当成参数传入函数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b = dict(key1=<span class="string">'你好'</span>, key2=<span class="string">'我好'</span>, key3=<span class="string">'大家好'</span>)   <span class="comment"># 效果和上面是一样的</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>法3：创建空字典，然后通过赋值的方式更新字典里面的键和值</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c = dict()  <span class="comment"># 创建空字典，等同于c = &#123;&#125;</span></span><br><span class="line">c[<span class="string">'key1'</span>] = <span class="string">'你好'</span></span><br><span class="line">c[<span class="string">'key2'</span>] = <span class="string">'我好'</span></span><br><span class="line">c[<span class="string">'key3'</span>] = <span class="string">'大家好'</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>法4：利用二维序列创建字典。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">list1 = [[<span class="string">'key1'</span>, <span class="string">'你好'</span>], [<span class="string">'key2'</span>, <span class="string">'我好'</span>], [<span class="string">'key3'</span>, <span class="string">'大家好'</span>]]</span><br><span class="line">dict1 = dict(list1)</span><br><span class="line">print(dict1)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字典的查看方法：</p>
+<ul>
+<li>直接通过访问键的方法查看值</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">'key1'</span>: <span class="string">'你好'</span>, <span class="string">'key2'</span>: <span class="string">'我好'</span>, <span class="string">'key3'</span>: <span class="string">'大家好'</span>&#125;</span><br><span class="line">print(a[<span class="string">'key2'</span>])</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">我好</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>通过for循环遍历的方法查看（不会循环的可暂时跳过）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">'key1'</span>: <span class="string">'你好'</span>, <span class="string">'key2'</span>: <span class="string">'我好'</span>, <span class="string">'key3'</span>: <span class="string">'大家好'</span>&#125;</span><br><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> a.items():</span><br><span class="line">    print(i, <span class="string">'\t'</span>, j)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">key1 	 你好</span></span><br><span class="line"><span class="string">key2 	 我好</span></span><br><span class="line"><span class="string">key3 	 大家好</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<p>items方法会把字典重新拆分成二维序列的形式。通过for循环可以抽出单个序列，其中序列左边为key，右边为value，所以可以通过此方法遍历字典中所有键和值。</p>
+</li>
+<li><p>字典元素的增加：</p>
+<ul>
+<li>直接通过增加新键的方法增加新字典。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">'key1'</span>: <span class="string">'你好'</span>, <span class="string">'key2'</span>: <span class="string">'我好'</span>, <span class="string">'key3'</span>: <span class="string">'大家好'</span>&#125;</span><br><span class="line">a[<span class="string">'key4'</span>] = <span class="string">'才是真的好'</span></span><br><span class="line">print(a)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">&#123;'key1': '你好', 'key2': '我好', 'key3': '大家好', 'key4': '才是真的好'&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字典元素的更新：</p>
+<ul>
+<li>直接通过访问键的方法，然后重新赋值即可更新值</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">'key1'</span>: <span class="string">'你好'</span>, <span class="string">'key2'</span>: <span class="string">'我好'</span>, <span class="string">'key3'</span>: <span class="string">'大家好'</span>&#125;</span><br><span class="line">a[<span class="string">'key3'</span>] = <span class="string">'楼上说的对'</span></span><br><span class="line">print(a)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">&#123;'key1': '你好', 'key2': '我好', 'key3': '楼上说的对'&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字典元素的清空：</p>
+<ul>
+<li>通过clear方法，可以把字典给清空</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">'key1'</span>: <span class="string">'你好'</span>, <span class="string">'key2'</span>: <span class="string">'我好'</span>, <span class="string">'key3'</span>: <span class="string">'大家好'</span>&#125;</span><br><span class="line">a.clear()</span><br><span class="line">print(a)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">&#123;&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字典的常用函数</p>
+<ul>
+<li>len: 查看字典元素个数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">'key1'</span>: <span class="string">'你好'</span>, <span class="string">'key2'</span>: <span class="string">'我好'</span>, <span class="string">'key3'</span>: <span class="string">'大家好'</span>&#125;</span><br><span class="line">print(len(a))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字典常用方法：</p>
+<ul>
+<li>key in dict,验证键是否在字典内，返回布尔值</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">'key1'</span>: <span class="string">'你好'</span>, <span class="string">'key2'</span>: <span class="string">'我好'</span>, <span class="string">'key3'</span>: <span class="string">'大家好'</span>&#125;</span><br><span class="line">print(<span class="string">'key1'</span> <span class="keyword">in</span> a)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">True</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>pop：删除字典中给定键所对应的值。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">'key1'</span>: <span class="string">'你好'</span>, <span class="string">'key2'</span>: <span class="string">'我好'</span>, <span class="string">'key3'</span>: <span class="string">'大家好'</span>&#125;</span><br><span class="line">a.pop(<span class="string">'key1'</span>)</span><br><span class="line">print(a)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">&#123;'key2': '我好', 'key3': '大家好'&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>items：将字典化为二维序列（上面讲过了）</li>
+<li>popitems：删除最后一个键值，并且随机返回删除的结果。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">'key1'</span>: <span class="string">'你好'</span>, <span class="string">'key2'</span>: <span class="string">'我好'</span>, <span class="string">'key3'</span>: <span class="string">'大家好'</span>&#125;</span><br><span class="line">result = a.popitem()  <span class="comment"># result用来接受返回的结果</span></span><br><span class="line">print(a)</span><br><span class="line">print(result)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">&#123;'key1': '你好', 'key2': '我好'&#125;</span></span><br><span class="line"><span class="string">('key3', '大家好')</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3><ul>
+<li><p>元组和列表类似，用小括号表示，但是元组不可以修改</p>
+</li>
+<li><p>元组的创建方法</p>
+<ul>
+<li>方法一：直接利用tuple函数创建元组（类似List函数）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = tuple()  <span class="comment"># 创建空元组</span></span><br><span class="line">b = tuple(<span class="string">'shdifhaih'</span>)  <span class="comment"># 会讲str按字母分割</span></span><br><span class="line">print(a)</span><br><span class="line">print(b)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">()</span></span><br><span class="line"><span class="string">('s', 'h', 'd', 'i', 'f', 'h', 'a', 'i', 'h')</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>方法二：利用小括号创建元组</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = (<span class="string">'a'</span>, )  <span class="comment"># 注意，如果只有一个元素，逗号不可以省略，不然括号会当成是数字运算符</span></span><br><span class="line">print(a)</span><br><span class="line">print(type(a))</span><br><span class="line">b = (<span class="string">'b'</span>)  <span class="comment"># 错误示范</span></span><br><span class="line">print(type(b))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">('a',)</span></span><br><span class="line"><span class="string">&lt;class 'tuple'&gt;</span></span><br><span class="line"><span class="string">&lt;class 'str'&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>元组的切片</p>
+<ul>
+<li>基本和列表一样的</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">a = tuple(range(<span class="number">10</span>))  <span class="comment"># tuple函数可以和List函数一样把列表转tuple</span></span><br><span class="line">print(a)</span><br><span class="line">print(a[<span class="number">0</span>])  <span class="comment"># 取第一个元素</span></span><br><span class="line">print(a[<span class="number">1</span>: <span class="number">4</span>])  <span class="comment"># 取2,3,4元素，不包括a[4]，即不包括第五个元素</span></span><br><span class="line">print(a[<span class="number">1</span>:<span class="number">9</span>:<span class="number">2</span>])  <span class="comment"># 从第二个取到第九个，不包括第10个，每隔两个取一个</span></span><br><span class="line">print(a[<span class="number">-3</span>:<span class="number">-1</span>])  <span class="comment"># 从倒数第三个，取到倒数第一个，不包括倒数第一个</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</span></span><br><span class="line"><span class="string">0</span></span><br><span class="line"><span class="string">(1, 2, 3)</span></span><br><span class="line"><span class="string">(1, 3, 5, 7)</span></span><br><span class="line"><span class="string">(7, 8)</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>元组运算符</p>
+<ul>
+<li>in：检测元素是否在元组内（注意：字符串（str）和列表（list）也有此方法）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = tuple(range(<span class="number">10</span>))  <span class="comment"># tuple函数可以和List函数一样把列表转tuple</span></span><br><span class="line">print(<span class="number">1</span> <span class="keyword">in</span> a)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">True</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>+</code>：元组可以用加号进行拼接，类似list的extend方法。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = tuple(range(<span class="number">10</span>))  <span class="comment"># tuple函数可以和List函数一样把列表转tuple</span></span><br><span class="line">b = tuple(range(<span class="number">11</span>, <span class="number">20</span>))</span><br><span class="line">a = a + b</span><br><span class="line">print(a)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19)</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>*</code>：元组的复制（注意：字符串（str）和列表（list）也有此方法）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = (<span class="number">20</span>,)</span><br><span class="line">a = a * <span class="number">10</span></span><br><span class="line">print(a)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">(20, 20, 20, 20, 20, 20, 20, 20, 20, 20)</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>元组的迭代（for循环再讲，List也可以）</li>
+</ul>
+</li>
+<li><p>元组的常用函数：</p>
+<ul>
+<li>len：计算元组个数，和列表一样的</li>
+<li>max：计算元组中最大的那个元素，和列表一样的</li>
+<li>min：计算元组中最小的那个元素，和列表一样的</li>
+<li>tuple：把其它类型转化为元组，上面元组的建立已经展示过了</li>
 </ul>
 </li>
 </ul>
-<p><img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220212318163.png" alt="image-20200220212318163"></p>
-<p><img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220212422591.png" alt="image-20200220212422591"></p>
-<p>通过观察：city.json的url为</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.zhipin.com/wapi/zpCommon/data/city.json</span><br></pre></td></tr></table></figure>
-
-<p>postion.json的url为</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.zhipin.com/wapi/zpCommon/data/position.json</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220212709237.png" alt="image-20200220212709237"></p>
-<h2 id="爬取城市代码"><a href="#爬取城市代码" class="headerlink" title="爬取城市代码"></a>爬取城市代码</h2><ul>
-<li><p>测试连接</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="comment"># requests--&gt;请求</span></span><br><span class="line">url = <span class="string">'https://www.zhipin.com/wapi/zpCommon/data/city.json'</span>  <span class="comment"># boss直聘城市链接</span></span><br><span class="line">response = requests.get(url)  </span><br><span class="line">print(response)  <span class="comment"># 打印响应</span></span><br></pre></td></tr></table></figure>
-
-<p>返回值：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Response [<span class="number">200</span>]&gt;</span><br></pre></td></tr></table></figure>
-
-<p>200：代表返回成功</p>
-<p>404：网络连接失败</p>
-<p>500：服务器奔溃</p>
-</li>
-<li><p>加入浏览器伪装头’user-agent’，防止被服务器发现你是爬虫</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">headers = &#123;<span class="string">'user-agent'</span>: <span class="string">'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36'</span>&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>第一次打印</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br><span class="line">url = <span class="string">'https://www.zhipin.com/wapi/zpCommon/data/city.json'</span>  <span class="comment"># boss直聘城市代码</span></span><br><span class="line">headers = &#123;<span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (X11; Linux x86_64) \</span></span><br><span class="line"><span class="string">AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36'</span>&#125;</span><br><span class="line">response = requests.get(url, headers=headers)</span><br><span class="line">data = response.json()  <span class="comment"># 从返回对象中提取json</span></span><br><span class="line">pprint(data)</span><br></pre></td></tr></table></figure>
-
-<p>结果如下：</p>
-<p><img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220223601456.png" alt="image-20200220223601456"></p>
-<p>根据上图观察，返回的json可以当成是一个多层字典。</p>
-</li>
-</ul>
-<p>  数据均在<code>zpData\cityList</code>下，于是对zpData进行第一次解包。</p>
-<p>  <img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220230905431.png" alt="image-20200220230905431"></p>
-<p>  对cityList进行第二次解包。</p>
-  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br><span class="line">url = <span class="string">'https://www.zhipin.com/wapi/zpCommon/data/city.json'</span>  <span class="comment"># boss直聘城市代码</span></span><br><span class="line">headers = &#123;<span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (X11; Linux x86_64) \</span></span><br><span class="line"><span class="string">AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36'</span>&#125;</span><br><span class="line">response = requests.get(url, headers=headers)</span><br><span class="line">data = response.json()  <span class="comment"># 从返回对象中提取json</span></span><br><span class="line">data1 = data[<span class="string">'zpData'</span>][<span class="string">'cityList'</span>]</span><br><span class="line"><span class="comment"># pprint(data1)</span></span><br><span class="line"><span class="keyword">for</span> ii <span class="keyword">in</span> data1:</span><br><span class="line">    province = ii[<span class="string">'name'</span>]  <span class="comment"># 省名</span></span><br><span class="line">    province_code = ii[<span class="string">'code'</span>]  <span class="comment"># 省对应的代码</span></span><br><span class="line">    city_list = ii[<span class="string">'subLevelModelList'</span>]</span><br><span class="line">    <span class="keyword">for</span> ci <span class="keyword">in</span> city_list:</span><br><span class="line">      city = ci[<span class="string">'name'</span>]  <span class="comment"># 城市名</span></span><br><span class="line">        city_code = ci[<span class="string">'code'</span>]  <span class="comment"># 城市代码</span></span><br><span class="line">      print(province, <span class="string">'\t'</span>, province_code, <span class="string">'\t'</span>, city, <span class="string">'\t'</span>, city_code)</span><br></pre></td></tr></table></figure>
-
-<p>  <img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220230342508.png" alt="image-20200220230342508"></p>
-<p>  省和城市代码就爬取完毕了，直接粘贴到excel就可以。至于如何直接导出excel，后面再说。</p>
 
       
     </div>
@@ -475,7 +541,7 @@
           
             <a href="/tags/python/" rel="tag"># python</a>
           
-            <a href="/tags/%E7%88%AC%E8%99%AB/" rel="tag"># 爬虫</a>
+            <a href="/tags/%E5%9F%BA%E7%A1%80/" rel="tag"># 基础</a>
           
         </div>
       
@@ -488,8 +554,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" rel="next" title="网易云网课记录">
-                <i class="fa fa-chevron-left"></i> 网易云网课记录
+              <a href="/2020/02/21/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC2%E5%A4%A9/" rel="next" title="python复习100天--第2天">
+                <i class="fa fa-chevron-left"></i> python复习100天--第2天
               </a>
             
           </div>
@@ -498,8 +564,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/02/20/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC1%E5%A4%A9/" rel="prev" title="python复习100天--第1天">
-                python复习100天--第1天 <i class="fa fa-chevron-right"></i>
+              <a href="/2040/02/18/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/" rel="prev" title="从无到有免费撸一个博客">
+                从无到有免费撸一个博客 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -654,7 +720,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#爬取城市代码"><span class="nav-number">2.</span> <span class="nav-text">爬取城市代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python基本数据类型"><span class="nav-number">1.</span> <span class="nav-text">Python基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字典"><span class="nav-number">1.1.</span> <span class="nav-text">字典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元组"><span class="nav-number">1.2.</span> <span class="nav-text">元组</span></a></li></ol></li></ol></div>
             
 
           </div>
