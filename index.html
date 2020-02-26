@@ -604,6 +604,260 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/26/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC4%E5%A4%A9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tlntin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Python博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/26/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC4%E5%A4%A9/" itemprop="url">python复习100天--第4天</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-26T19:00:24+08:00">
+                2020-02-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">python复习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Python基本数据类型"><a href="#Python基本数据类型" class="headerlink" title="Python基本数据类型"></a>Python基本数据类型</h2><h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><ul>
+<li>集合（set）是由一个或数个形态各异的大小整体组成的，构成集合的事物或对象称作元素或是成员。</li>
+<li>集合的创建方法：大括号或者set函数</li>
+<li>集合是无序的，而列表和元组是有序的</li>
+<li>集合中的元素不存在重复（所以集合常用来数据去重）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;  <span class="comment"># 注意：集合只有逗号，没得冒号</span></span><br><span class="line">b = set(<span class="string">'abcde'</span>)</span><br><span class="line">print(a, <span class="string">'\n'</span>, b)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&#123;1, 2, 3&#125; </span></span><br><span class="line"><span class="string">&#123;'a', 'c', 'e', 'd', 'b'&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>集合的查看方法<ul>
+<li>集合中单个元素无法抽出来查看，因为集合是无序的</li>
+</ul>
+</li>
+<li>集合元素的增加<ul>
+<li>利用add方法可以增加元素</li>
+<li>利用update方法也可以增加元素</li>
+<li>add用于增加单个元素，update用于增加多个元素，且update增加元素的格式为列表或者元组或者字典</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;  <span class="comment"># 注意：集合只有逗号，没得冒号</span></span><br><span class="line">a.add(<span class="number">4</span>)</span><br><span class="line">a.update([<span class="number">5</span>])  <span class="comment"># 用update增加单个元素也需要使用列表格式</span></span><br><span class="line">print(a)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&#123;1, 2, 3, 4, 5&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>集合元素的删除<ul>
+<li>使用remove方法移除特定元素（list中也有这个方法）</li>
+<li>使用pop方法随机移除一个元素（集合没有序号，所以只能随机移除）</li>
+<li>使用discard移除特定元素，如果元素不存在不会报错</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a = set(range(<span class="number">10</span>))  <span class="comment"># set把range转集合</span></span><br><span class="line">a.remove(<span class="number">9</span>)</span><br><span class="line">a.pop()  <span class="comment"># 随机删除</span></span><br><span class="line">a.discard(<span class="number">100</span>)  <span class="comment"># 这个元素不存在，不会报错</span></span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&#123;1, 2, 3, 4, 5, 6, 7, 8&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>集合的数学运算符</p>
+<ul>
+<li><p>Python中的集合和数学中的集合基本使用方法一致</p>
+</li>
+<li><p><code>-</code>：用于求两个集合的差集（绿色剩余部分表示A-B）</p>
+<p><img src="/2020/02/26/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC4%E5%A4%A9/image-20200226201022792.png" alt="image-20200226201022792"></p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = set(range(<span class="number">10</span>))  <span class="comment"># set把range转集合</span></span><br><span class="line">b = set(range(<span class="number">6</span>, <span class="number">12</span>))</span><br><span class="line">print(a-b)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&#123;0, 1, 2, 3, 4, 5&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><ul>
+<li><code>|</code>：用于求两个集合的并集（绿色部分为A|B，可以理解为A或者B）</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2020/02/26/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC4%E5%A4%A9/image-20200226201438071.png" alt="image-20200226201438071"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = set(range(<span class="number">10</span>))  <span class="comment"># set把range转集合</span></span><br><span class="line">b = set(range(<span class="number">6</span>, <span class="number">12</span>))</span><br><span class="line">print(a | b)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&#123;0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><ul>
+<li><code>&amp;</code>：用于求两个集合的交集（阴影黄色部分为A&amp;B）</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2020/02/26/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC4%E5%A4%A9/image-20200226202301707.png" alt="image-20200226202301707"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = set(range(<span class="number">10</span>))  <span class="comment"># set把range转集合</span></span><br><span class="line">b = set(range(<span class="number">6</span>, <span class="number">12</span>))</span><br><span class="line">print(a &amp; b)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&#123;8, 9, 6, 7&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><ul>
+<li><code>^</code>：用于求两个集合不同时存在的元素（可以翻译为A否B，上面图黄色加红色就是了）</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = set(range(<span class="number">10</span>))  <span class="comment"># set把range转集合</span></span><br><span class="line">b = set(range(<span class="number">6</span>, <span class="number">12</span>))</span><br><span class="line">print(a ^ b)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&#123;0, 1, 2, 3, 4, 5, 10, 11&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>集合中常用函数</p>
+<ul>
+<li>len函数：计算集合中元素个数。使用同列表、字典、元组、字符串</li>
+<li>in函数：验证元素是否在集合中。使用同列表、字典、元组、字符串</li>
+</ul>
+</li>
+<li><p>集合中常用方法：</p>
+<ul>
+<li>clear()：移除集合中所有元素，同列表，字典</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = set(range(<span class="number">10</span>))  <span class="comment"># set把range转集合</span></span><br><span class="line">b = set(range(<span class="number">6</span>, <span class="number">12</span>))</span><br><span class="line">a.clear()</span><br><span class="line">print(a)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">set()</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>copy()：复制集合，同列表</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = set(range(<span class="number">10</span>))  <span class="comment"># set把range转集合</span></span><br><span class="line">b = a.copy()</span><br><span class="line">print(b)</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&#123;0, 1, 2, 3, 4, 5, 6, 7, 8, 9&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>union：返回两个集合并集，和上面的<code>|</code>一样</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = set(range(<span class="number">10</span>))  <span class="comment"># set把range转集合</span></span><br><span class="line">b = set(range(<span class="number">6</span>, <span class="number">13</span>))</span><br><span class="line">print(a.union(b))</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&#123;0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>difference：返回两个集合的差集，和上面的<code>-</code>一样</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = set(range(<span class="number">10</span>))  <span class="comment"># set把range转集合</span></span><br><span class="line">b = set(range(<span class="number">6</span>, <span class="number">13</span>))</span><br><span class="line">print(a.difference(b))</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&#123;0, 1, 2, 3, 4, 5&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>intersection：返回两个集合的交集，和上面的<code>&amp;</code>一样</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = set(range(<span class="number">10</span>))  <span class="comment"># set把range转集合</span></span><br><span class="line">b = set(range(<span class="number">6</span>, <span class="number">13</span>))</span><br><span class="line">print(a.intersection(b))</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&#123;8, 9, 6, 7&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>symmetric_difference：返回两个不相同的元素，和上面的<code>^</code>一样</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = set(range(<span class="number">10</span>))  <span class="comment"># set把range转集合</span></span><br><span class="line">b = set(range(<span class="number">6</span>, <span class="number">13</span>))</span><br><span class="line">print(a.symmetric_difference(b))</span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&#123;0, 1, 2, 3, 4, 5, 10, 11, 12&#125;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/23/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC3%E5%A4%A9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -3154,176 +3408,6 @@ print(a)  <span class="comment"># 输出结果: 我爱你，中国</span>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/17/%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tlntin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Python博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/17/%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/" itemprop="url">python分支结构</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-17T19:00:24+08:00">
-                2020-02-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index">
-                    <span itemprop="name">Python基础</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>用于做选择判断</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>:条件<span class="number">1</span></span><br><span class="line">	xxxxx</span><br><span class="line"> <span class="keyword">else</span>:</span><br><span class="line">	 xxxxxx</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a  = <span class="number">10</span></span><br><span class="line"><span class="keyword">if</span> a&gt; <span class="number">20</span>:</span><br><span class="line">	print(<span class="string">"a比20大"</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	print(<span class="string">"a比20小"</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>分支嵌套</li>
-<li>if里面嵌套if<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 条件<span class="number">1</span>:</span><br><span class="line">	<span class="keyword">if</span> 条件<span class="number">2</span>：</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line"><span class="keyword">else</span>:</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>多重分支</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 条件<span class="number">1</span>：</span><br><span class="line">	代码块</span><br><span class="line"><span class="keyword">elif</span> 条件<span class="number">2</span>：</span><br><span class="line">	代码块</span><br><span class="line"><span class="keyword">elif</span> 条件<span class="number">3</span></span><br><span class="line">	代码块</span><br><span class="line"><span class="keyword">elif</span> 条件<span class="number">4</span></span><br><span class="line">	代码块</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	代码块</span><br></pre></td></tr></table></figure>
-
-<p>嵌套</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> x &gt;= <span class="number">90</span>:</span><br><span class="line">	xxx</span><br></pre></td></tr></table></figure>
-
-<h2 id="input"><a href="#input" class="headerlink" title="input"></a>input</h2><h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><ul>
-<li>for循环</li>
-<li>while</li>
-</ul>
-<p>print(“我是%s，我今年%s岁了”)</p>
-<p>%s 替换str,</p>
-<p>%d 替换整数</p>
-<h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><p>条件循环，当什么什么时候</p>
-<p>for 知道循环次数</p>
-<p>while 只知道循环条件，不知道多少次</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> i&lt;<span class="number">100</span>:</span><br><span class="line">	xxxxxx</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -3374,7 +3458,7 @@ print(a)  <span class="comment"># 输出结果: 我爱你，中国</span>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
