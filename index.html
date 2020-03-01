@@ -604,6 +604,214 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/01/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC5%E5%A4%A9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tlntin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Python博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/01/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC5%E5%A4%A9/" itemprop="url">python复习100天--第4天</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-01T14:00:24+08:00">
+                2020-03-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">python复习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="条件控制"><a href="#条件控制" class="headerlink" title="条件控制"></a>条件控制</h2><ul>
+<li>if–else为最基本的条件控制语句</li>
+<li>if 后面接一个布尔表达式，如果是真，执行一段代码，如果不是真，执行另外一段代码</li>
+<li>else if一般简写为elif</li>
+<li>代码块需要缩进</li>
+<li>else不需要接条件，代表上面的都不成立的情况</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">a = float(input(<span class="string">"请输入你的成绩："</span>))</span><br><span class="line"><span class="keyword">if</span> a &gt;= <span class="number">90</span>:  <span class="comment"># 成绩大于等于90</span></span><br><span class="line">    print(<span class="string">'你的成绩为优秀'</span>)</span><br><span class="line"><span class="keyword">elif</span> a &gt;= <span class="number">80</span>:  <span class="comment"># 成绩小于90，但是大于等于80</span></span><br><span class="line">    print(<span class="string">'你的成绩为良好'</span>)</span><br><span class="line"><span class="keyword">elif</span> a &gt;= <span class="number">60</span>:  <span class="comment"># 成绩小于80，但是大于等于60</span></span><br><span class="line">    print(<span class="string">'你的成绩为及格'</span>)</span><br><span class="line"><span class="keyword">else</span>:  <span class="comment"># 最后一个else不接条件，就是60以下的意思</span></span><br><span class="line">    print(<span class="string">'不及格'</span>)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">请输入你的成绩：85</span></span><br><span class="line"><span class="string">你的成绩为良好</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="if-嵌套"><a href="#if-嵌套" class="headerlink" title="if 嵌套"></a>if 嵌套</h3><ul>
+<li>if可以嵌套，即分支之后再分支</li>
+<li>根据缩进位置确认嵌套的if和else对应的结构</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">a = float(input(<span class="string">"请输入你的成绩："</span>))</span><br><span class="line"><span class="keyword">if</span> a &gt;= <span class="number">60</span>:  <span class="comment"># 如果成绩大于等于60</span></span><br><span class="line">    <span class="keyword">if</span> a &gt;= <span class="number">80</span>:  <span class="comment"># 如果成绩大于等于80</span></span><br><span class="line">        <span class="keyword">if</span> a &gt;= <span class="number">90</span>:  <span class="comment"># 如果成绩大于等于90</span></span><br><span class="line">            print(<span class="string">'你的成绩为优秀'</span>)</span><br><span class="line">        <span class="keyword">else</span>:  <span class="comment"># 如果成绩小于90，但是大于80，对应第三个if</span></span><br><span class="line">            print(<span class="string">'你的成绩为良好'</span>)</span><br><span class="line">    <span class="keyword">else</span>:  <span class="comment"># 如果小于80，但是大于60，对应第二个if</span></span><br><span class="line">        print(<span class="string">'你的成绩为及格'</span>)</span><br><span class="line"><span class="keyword">else</span>:  <span class="comment"># 如果成绩小于60，对应第一个if</span></span><br><span class="line">    print(<span class="string">'不及格'</span>)</span><br><span class="line">    </span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">请输入你的成绩：85</span></span><br><span class="line"><span class="string">你的成绩为良好</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2><h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><ul>
+<li>for xx in xxx</li>
+<li>xxx可以为字符串，列表，元组，甚至有时候是字典</li>
+<li>xx可以为任意变量名称，如x,i,j等等</li>
+<li>需要用冒号和缩进符控制需要循环的语句块</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    print(x)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="string">'abcd'</span>:</span><br><span class="line">    print(i)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">0</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">2</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">4</span></span><br><span class="line"><span class="string">a</span></span><br><span class="line"><span class="string">b</span></span><br><span class="line"><span class="string">c</span></span><br><span class="line"><span class="string">d</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>for 循环常和列表放在一起构成列表表达式，列表表达式可以方便快捷的生成新列表</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">list2 = []  <span class="comment"># 构建一个空列表，用来储存新列表</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    list2.append(x ** <span class="number">2</span>)</span><br><span class="line">list3 = [x**<span class="number">2</span> <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>)]  <span class="comment"># 和上面三行代码效果一样</span></span><br><span class="line">print(list2)</span><br><span class="line">print(list3)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">[0, 1, 4, 9, 16]</span></span><br><span class="line"><span class="string">[0, 1, 4, 9, 16]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>for循环之间也可以嵌套</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打印9*9乘法口诀</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">10</span>):  <span class="comment"># 用来控制有多少行</span></span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, i+<span class="number">1</span>):  <span class="comment"># 用来控制每行有多少个数</span></span><br><span class="line">        print(<span class="string">'&#123;&#125;x&#123;&#125;=&#123;&#125;'</span>.format(i, j, i*j), end=<span class="string">'\t'</span>)  <span class="comment"># 为了显示在一行，这里用水平制表符隔开</span></span><br><span class="line">    print(<span class="string">''</span>)  <span class="comment"># 需要一个回车，因为这一列输出完了</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">1x1=1	</span></span><br><span class="line"><span class="string">2x1=2	2x2=4	</span></span><br><span class="line"><span class="string">3x1=3	3x2=6	3x3=9	</span></span><br><span class="line"><span class="string">4x1=4	4x2=8	4x3=12	4x4=16	</span></span><br><span class="line"><span class="string">5x1=5	5x2=10	5x3=15	5x4=20	5x5=25	</span></span><br><span class="line"><span class="string">6x1=6	6x2=12	6x3=18	6x4=24	6x5=30	6x6=36	</span></span><br><span class="line"><span class="string">7x1=7	7x2=14	7x3=21	7x4=28	7x5=35	7x6=42	7x7=49	</span></span><br><span class="line"><span class="string">8x1=8	8x2=16	8x3=24	8x4=32	8x5=40	8x6=48	8x7=56	8x8=64	</span></span><br><span class="line"><span class="string">9x1=9	9x2=18	9x3=27	9x4=36	9x5=45	9x6=54	9x7=63	9x8=72	9x9=81	</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>for循环的打断<ul>
+<li>break：直接跳出本次循环，本次循环结束</li>
+<li>continue：跳过本次循环，进入下一次循环</li>
+<li>pass：用来占一个位置，不具有实际意义，若后面有代码仍然会执行</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 演示打印奇数</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>:  <span class="comment"># 如果为偶数，跳过</span></span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(i)  <span class="comment"># 否则才打印</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">5</span></span><br><span class="line"><span class="string">7</span></span><br><span class="line"><span class="string">9</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 演示打印前5个数</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">if</span> i == <span class="number">5</span>:</span><br><span class="line">        <span class="keyword">break</span>  <span class="comment"># 如果i等于5，退出本次循环</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(i)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">0</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">2</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">4</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 演示pass占位功能</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 演示pass占位功能</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line">    print(i)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">0</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">2</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">4</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>for后面也可以接else，表示循环结束后应该要执行的代码</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 演示pass占位功能</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>):</span><br><span class="line">    print(i)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'循环已经结束'</span>)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">0</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">2</span></span><br><span class="line"><span class="string">循环已经结束</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><ul>
+<li>翻译为当什么什么时候就执行循环，可以理解为条件循环</li>
+<li>while后面接布尔值</li>
+<li>while也可以接else</li>
+<li>while打断同for，也可以用break, continue</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 计算银行存款利息多少年才能翻倍</span></span><br><span class="line">i = <span class="number">0.05</span>  <span class="comment"># 假设银行利息为5%</span></span><br><span class="line">s = <span class="number">1000</span>  <span class="comment"># 本金为1000</span></span><br><span class="line">n = <span class="number">0</span>  <span class="comment"># n为存款年限</span></span><br><span class="line"><span class="keyword">while</span> s &lt; <span class="number">2000</span>:</span><br><span class="line">    n += <span class="number">1</span>  <span class="comment"># 等同于n=n+1</span></span><br><span class="line">    s = s * (<span class="number">1</span>+i)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'循环结束'</span>)  <span class="comment"># while也可以接else</span></span><br><span class="line">    print(<span class="string">'&#123;&#125;年后你的本息和翻倍'</span>.format(n))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果：</span></span><br><span class="line"><span class="string">循环结束</span></span><br><span class="line"><span class="string">15年后你的本息和翻倍</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="for和while的区别"><a href="#for和while的区别" class="headerlink" title="for和while的区别"></a>for和while的区别</h3><ul>
+<li>for知道要循环多少次，而while不知道</li>
+<li>for循环为遍历循环，通常为遍历字符串，列表，元祖、甚至字典</li>
+<li>while循环为条件循环，只要条件成立，就可以一直循环下去</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/26/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC4%E5%A4%A9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -3227,187 +3435,6 @@ print(a)  <span class="comment"># 输出结果: 我爱你，中国</span>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/17/wps%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tlntin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Python博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/17/wps%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" itemprop="url">wps正则表达式</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-17T19:00:24+08:00">
-                2020-02-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8A%9E%E5%85%AC/" itemprop="url" rel="index">
-                    <span itemprop="name">办公</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="正则准备工作"><a href="#正则准备工作" class="headerlink" title="正则准备工作"></a>正则准备工作</h3><ul>
-<li><kbd>ctrl</kbd> + <kbd>F</kbd>,’高级搜索’–&gt;’使用通配符’</li>
-</ul>
-<h3 id="常用符号"><a href="#常用符号" class="headerlink" title="常用符号"></a>常用符号</h3><ul>
-<li><p>[] 代表出现的东西</p>
-<ul>
-<li>[1] 数字1</li>
-<li>[0-9] 数字0-9</li>
-<li>[a-z] 全部小写字母</li>
-<li>[A-Z] 全部大写字母</li>
-<li>[0-9a-zA-Z] 数字或字母</li>
-</ul>
-</li>
-<li><p>{}代表出现次数</p>
-<ul>
-<li>{1} 出现一次</li>
-<li>{1,10}出现一次到10次</li>
-</ul>
-</li>
-<li><p>| 或，两者二选一，需要用括号</p>
-</li>
-<li><p>()代表一组</p>
-</li>
-<li><p>案例，提取18或13开头的11位数字</p>
-</li>
-<li><pre><code class="shell">(18|13)[0-9]{9}
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 通配符</span><br><span class="line"></span><br><span class="line">- &quot; * &quot;:代表出现0-n次,任意字符，但不能包括回车键</span><br><span class="line">- &quot; ? &quot;:代表出现1次，任意字符，但不能包括回车键</span><br><span class="line">- ! 代表否的意思，不出现</span><br><span class="line">- !&#x3D;</span><br><span class="line"></span><br><span class="line">案例2：寻找王姓名字的人</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;shell</span><br><span class="line">王?&#123;1,2&#125;</span><br></pre></td></tr></table></figure>
-</code></pre>
-</li>
-</ul>
-<p>案例3，提取张姓同学的电话及号码</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">张?&#123;1,2&#125; *[0-9]&#123;11&#125;</span><br></pre></td></tr></table></figure>
-
-<p>案例三，提取姓名及电话</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?([! |!\<span class="type">n</span>]&#123;<span class="number">2</span>,<span class="number">3</span>&#125;) *([<span class="number">0</span>-<span class="number">9</span>]&#123;<span class="number">11</span>&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>案例4，提取所有日期</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">0</span>-<span class="number">9</span>]&#123;<span class="number">4</span>&#125;?[<span class="number">0</span>-<span class="number">9</span>]&#123;<span class="number">1</span>,<span class="number">2</span>&#125;?[<span class="number">0</span>-<span class="number">9</span>]&#123;<span class="number">1</span>,<span class="number">2</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<p>案例5，提取所有 1996 年以前出生的学生</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[! ]&#123;2,3&#125;?&#123;1,11&#125;[1][0-9]&#123;2&#125;[0-5]?[0-9]&#123;1,2&#125;?[0-9]&#123;1,2&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -3458,7 +3485,7 @@ print(a)  <span class="comment"># 输出结果: 我爱你，中国</span>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

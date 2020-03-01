@@ -282,6 +282,187 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/17/wps%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tlntin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Python博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/17/wps%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" itemprop="url">wps正则表达式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-17T19:00:24+08:00">
+                2020-02-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8A%9E%E5%85%AC/" itemprop="url" rel="index">
+                    <span itemprop="name">办公</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="正则准备工作"><a href="#正则准备工作" class="headerlink" title="正则准备工作"></a>正则准备工作</h3><ul>
+<li><kbd>ctrl</kbd> + <kbd>F</kbd>,’高级搜索’–&gt;’使用通配符’</li>
+</ul>
+<h3 id="常用符号"><a href="#常用符号" class="headerlink" title="常用符号"></a>常用符号</h3><ul>
+<li><p>[] 代表出现的东西</p>
+<ul>
+<li>[1] 数字1</li>
+<li>[0-9] 数字0-9</li>
+<li>[a-z] 全部小写字母</li>
+<li>[A-Z] 全部大写字母</li>
+<li>[0-9a-zA-Z] 数字或字母</li>
+</ul>
+</li>
+<li><p>{}代表出现次数</p>
+<ul>
+<li>{1} 出现一次</li>
+<li>{1,10}出现一次到10次</li>
+</ul>
+</li>
+<li><p>| 或，两者二选一，需要用括号</p>
+</li>
+<li><p>()代表一组</p>
+</li>
+<li><p>案例，提取18或13开头的11位数字</p>
+</li>
+<li><pre><code class="shell">(18|13)[0-9]{9}
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 通配符</span><br><span class="line"></span><br><span class="line">- &quot; * &quot;:代表出现0-n次,任意字符，但不能包括回车键</span><br><span class="line">- &quot; ? &quot;:代表出现1次，任意字符，但不能包括回车键</span><br><span class="line">- ! 代表否的意思，不出现</span><br><span class="line">- !&#x3D;</span><br><span class="line"></span><br><span class="line">案例2：寻找王姓名字的人</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;shell</span><br><span class="line">王?&#123;1,2&#125;</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+<p>案例3，提取张姓同学的电话及号码</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">张?&#123;1,2&#125; *[0-9]&#123;11&#125;</span><br></pre></td></tr></table></figure>
+
+<p>案例三，提取姓名及电话</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?([! |!\<span class="type">n</span>]&#123;<span class="number">2</span>,<span class="number">3</span>&#125;) *([<span class="number">0</span>-<span class="number">9</span>]&#123;<span class="number">11</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>案例4，提取所有日期</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">0</span>-<span class="number">9</span>]&#123;<span class="number">4</span>&#125;?[<span class="number">0</span>-<span class="number">9</span>]&#123;<span class="number">1</span>,<span class="number">2</span>&#125;?[<span class="number">0</span>-<span class="number">9</span>]&#123;<span class="number">1</span>,<span class="number">2</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>案例5，提取所有 1996 年以前出生的学生</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[! ]&#123;2,3&#125;?&#123;1,11&#125;[1][0-9]&#123;2&#125;[0-5]?[0-9]&#123;1,2&#125;?[0-9]&#123;1,2&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/17/%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -794,7 +975,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
