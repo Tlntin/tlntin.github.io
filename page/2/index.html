@@ -282,6 +282,1177 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tlntin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Python博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" itemprop="url">网易云网课记录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-18T10:00:00+08:00">
+                2020-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index">
+                    <span itemprop="name">python基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><ul>
+<li><p>简称为OOP（Object Oriented Programming）</p>
+</li>
+<li><p>python中每一个值都是一个对象，整数、浮点数、字符串、列表都是对象</p>
+</li>
+<li><p>面向对象编程值得就是一个或者对个对象交互的概念</p>
+</li>
+<li><p>对象允许我们对现实世界中的概念进行建模</p>
+<p>eg :</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">March_list = [<span class="number">541</span>, <span class="number">600</span>, <span class="number">200</span>, <span class="number">500.</span>..]  <span class="comment"># 这个列表记录了博物馆31天的参观人数</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对象应包括数据（包含数字或者字符串）加上可以操作的运行（下面介绍类别的时候详细介绍这里）。</p>
+</li>
+</ul>
+<h2 id="类别"><a href="#类别" class="headerlink" title="类别"></a>类别</h2><ul>
+<li><p>每一个对象都属于一个类别</p>
+<p>eg:  张三是一个自行车工厂的工人，它可以制造自行车，它属于自行车制造者。</p>
+</li>
+</ul>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><ul>
+<li><p>每一个类别都有自己的属性</p>
+<p>eg: 对于一辆自行车，它的颜色，尺寸，类型都可以作为他的属性</p>
+</li>
+</ul>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
+<li><p>每一个类别都应该有自己的方法，它是一个可以应用与对象的结果逻辑序列。</p>
+<ul>
+<li><p>对象的方法可以是一个指令</p>
+<p>eg：对于自行车，它的方法可能是向左转，向右转，减速，加速</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">objects.turn_left()  <span class="comment"># 向左转</span></span><br><span class="line">objects.turn_right()  <span class="comment"># 向右转</span></span><br><span class="line">objects.slow_down()  <span class="comment"># 减速</span></span><br><span class="line">objects.accelerate()  <span class="comment"># 加速</span></span><br></pre></td></tr></table></figure>
+
+<p>eg2: 创建一个列表（列表也是对象）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="number">15</span>, <span class="number">12</span>, <span class="number">64</span>]  <span class="comment"># 实例化列表对象，这个对象属于列表类别</span></span><br><span class="line"><span class="comment"># 它的一个属性就是它的元素的数据类型，子元素属于整数。</span></span><br><span class="line">list1.extend([<span class="number">5</span>,<span class="number">6</span>, <span class="number">7</span>])  <span class="comment"># 扩展是列表对象的一个方法</span></span><br><span class="line">print(list1)</span><br><span class="line">list1.append(<span class="number">8</span>)  <span class="comment"># 追加也是列表对象的一个方法</span></span><br><span class="line">print(list1)</span><br></pre></td></tr></table></figure>
+
+<p>输出结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">15</span>, <span class="number">12</span>, <span class="number">64</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>]</span><br><span class="line">[<span class="number">15</span>, <span class="number">12</span>, <span class="number">64</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>]</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="方法与函数"><a href="#方法与函数" class="headerlink" title="方法与函数"></a>方法与函数</h3><table>
+<thead>
+<tr>
+<th align="center">区别</th>
+<th align="center">方法</th>
+<th align="center">函数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">方法是一种特别的函数</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">方法包含的参数中，一定有一个参数是对象本身</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">方法属于某个类别，而函数可以独立存在</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">objects.function()</td>
+<td align="center">function()</td>
+</tr>
+</tbody></table>
+<p>eg: 对于自行车的向左转方法，如果没有自行车这个对象，那么向左转也就不成立了。</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">bike</span><span class="params">(color, size)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    定义一个类别：自行车</span></span><br><span class="line"><span class="string">    自行车包含两个属性，color:颜色，size:大小</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">turn_left</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        定义一个方法，向左转</span></span><br><span class="line"><span class="string">        它属于自行车这个类。</span></span><br><span class="line"><span class="string">        它包含了基本参数:self，self代表自行车这个对象</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">bike1 = bike(color=<span class="string">'红色'</span>, size=<span class="number">22</span>)  <span class="comment"># 实例化自行车这个类。</span></span><br><span class="line"><span class="comment"># 代表创建一个红色的，大小为22的自行车</span></span><br><span class="line">bike1.turn_left() <span class="comment"># 控制自行车往左转。self参数代表对象本身，使用的时候一般省略。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><ul>
+<li><p>模块是一种预写代码，包含变量的定义，函数和类别</p>
+</li>
+<li><p>它可以十分方便的加载到新的程序当中，可以帮我们省略很多代码。</p>
+</li>
+<li><p>导入模块的五种方法</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math  <span class="comment"># 导入math模块</span></span><br><span class="line">print(math.sqrt(<span class="number">4</span>))  <span class="comment"># 计算４的平方根</span></span><br></pre></td></tr></table></figure>
+
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt  <span class="comment"># 从math模块中导入sqrt函数</span></span><br><span class="line">print(sqrt(<span class="number">4</span>))  <span class="comment"># 计算４的平方根</span></span><br></pre></td></tr></table></figure>
+
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt <span class="keyword">as</span> s  </span><br><span class="line"><span class="comment"># 从math模块中导入sqrt函数,并且给它一个简称为s</span></span><br><span class="line">print(s(<span class="number">4</span>))  <span class="comment"># 计算４的平方根</span></span><br></pre></td></tr></table></figure>
+
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math <span class="keyword">as</span> s  <span class="comment"># 导入math模块并且给一个别称为s</span></span><br><span class="line">print(s.sqrt(<span class="number">4</span>))  <span class="comment"># 计算４的平方根</span></span><br></pre></td></tr></table></figure>
+
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> *  <span class="comment"># 从math模块中导所有函数</span></span><br><span class="line">print(sqrt(<span class="number">4</span>))  <span class="comment"># 计算４的平方根</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="包"><a href="#包" class="headerlink" title="包"></a>包</h2><ul>
+<li><p>包是相关python代码的集合，可以简单理解为模块的集合就是包</p>
+<p>包-&gt;模块-&gt;类-&gt;函数</p>
+</li>
+</ul>
+<h2 id="python标准模块库"><a href="#python标准模块库" class="headerlink" title="python标准模块库"></a>python标准模块库</h2><ul>
+<li>当前可用模块的集合</li>
+</ul>
+<h2 id="Python常用数据分析库"><a href="#Python常用数据分析库" class="headerlink" title="Python常用数据分析库"></a>Python常用数据分析库</h2><ul>
+<li>numpy</li>
+<li>pandas</li>
+<li>matplotlib    # 可视化工具</li>
+<li>scipy   # 三合一工具包</li>
+<li>statsmodels  # 包含描述性统计</li>
+</ul>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
+<li><p>数组是任何编程语言中的基本数据结构</p>
+</li>
+<li><p>数据可以把数据组织成向量、矩阵和其它多维对象</p>
+</li>
+<li><p>数组中的对象称为数组元素</p>
+</li>
+<li><p>数组和列表的最大区别就是，数组中的数组元素都必须为相同数据类型。而列表可能同时包含整数，字符串，浮点数。</p>
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">a = np.array([[<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]])</span><br><span class="line">print(a)</span><br><span class="line">print(type(a))</span><br></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="number">0</span> <span class="number">1</span> <span class="number">2</span>]</span><br><span class="line"> [<span class="number">4</span> <span class="number">5</span> <span class="number">6</span>]]</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">numpy</span>.<span class="title">ndarray</span>'&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>ndarray</code>: Numpy n-dimensional array :代表Numpy的N维数组。</p>
+</li>
+<li><p>查看形状</p>
+<p>eg</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(a.shape)  <span class="comment"># 结果是(2, 3)  # 代表两行三列</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>访问位置</p>
+<p>eg</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(a[<span class="number">1</span>, <span class="number">1</span>])  <span class="comment"># 打印第二行第二列，结果是5</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果只输入一个索引，默认为行索引</p>
+<p>eg：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(a[<span class="number">0</span>])  <span class="comment"># 提取第一行的数据</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果</span></span><br><span class="line"><span class="string">[0 1 2]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>一维数组(也称为向量)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">b = np.array([<span class="number">3</span>, <span class="number">5</span>])</span><br><span class="line">print(b)</span><br><span class="line"><span class="comment"># [3, 5]  可以看出数学向量的（3,5）</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>二位数组，也称为矩阵</p>
+</li>
+<li><p>numpy生成数组</p>
+<p>eg</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">c = np.random.randint(<span class="number">1</span>, <span class="number">6</span>, [<span class="number">4</span>, <span class="number">6</span>])</span><br><span class="line"><span class="comment"># 生成一个随机整数（整数卫于1,6之间）构成的一个4*6的矩阵</span></span><br><span class="line">print(c)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="number">5</span> <span class="number">1</span> <span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">3</span>]</span><br><span class="line"> [<span class="number">1</span> <span class="number">2</span> <span class="number">2</span> <span class="number">1</span> <span class="number">4</span> <span class="number">1</span>]</span><br><span class="line"> [<span class="number">4</span> <span class="number">4</span> <span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">3</span>]</span><br><span class="line"> [<span class="number">4</span> <span class="number">2</span> <span class="number">1</span> <span class="number">1</span> <span class="number">5</span> <span class="number">1</span>]]</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/17/XPath/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tlntin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Python博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/17/XPath/" itemprop="url">Xpath</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-17T19:00:24+08:00">
+                2020-02-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python%E7%88%AC%E8%99%AB/" itemprop="url" rel="index">
+                    <span itemprop="name">Python爬虫</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>在XML文件中查找信息的一套规则/语言，根据XML的元素或者属性进行遍历。</li>
+</ul>
+<h2 id="Xpath-开发工具"><a href="#Xpath-开发工具" class="headerlink" title="Xpath 开发工具"></a>Xpath 开发工具</h2><ul>
+<li>开源表达式编辑工具：XMLQuire</li>
+<li>Chorme插件：Xpath Helper</li>
+</ul>
+<h2 id="选取节点"><a href="#选取节点" class="headerlink" title="选取节点"></a>选取节点</h2><ul>
+<li>nodename:选取此节点的所有节点</li>
+<li>/ :根节点</li>
+<li>// :选取节点，不考虑位置</li>
+<li>. ：选取当前节点</li>
+<li>.. ：选取当前节点的父节点</li>
+<li>@ ：选取属性</li>
+<li>/ :一般安装路径查找，表示它的子节点</li>
+<li>// :表示它的后代，包括子、孙<ul>
+<li>//Age[@Dtail] : 选取带Detail的Age元素</li>
+</ul>
+</li>
+<li>谓语-Predicates<ul>
+<li>/School/Student[1]  :选取School下面第一个节点</li>
+<li>/School/Student[last()]  : 选取School下面最后一个节点</li>
+<li>/School/Student[position()&lt;3]  : 选取School下面前三个节点</li>
+<li>//Student[@score=”99”]  选取属性带有99的节点</li>
+</ul>
+</li>
+</ul>
+<h2 id="Xpath的一些操作"><a href="#Xpath的一些操作" class="headerlink" title="Xpath的一些操作"></a>Xpath的一些操作</h2><ul>
+<li>| ：或者<ul>
+<li>//Student | //Teacher 2选1</li>
+</ul>
+</li>
+<li>其余不常见Xpath运算符合 +， - ，*， div, &gt;, &lt;</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/17/Django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tlntin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Python博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/17/Django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url">Django学习笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-17T19:00:24+08:00">
+                2020-02-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PythonWeb/" itemprop="url" rel="index">
+                    <span itemprop="name">PythonWeb</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>环境<ul>
+<li>Python3.6</li>
+<li>django1.8</li>
+</ul>
+</li>
+<li>参考资料<ul>
+<li>django架站的16堂课。</li>
+</ul>
+</li>
+</ul>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><ul>
+<li><p>anaconda使用</p>
+<ul>
+<li>conda list:显示当前环境安装的包</li>
+<li>conda env list:显示安装的虚拟环境列表</li>
+<li>conda create -n env_name python=3.7</li>
+<li>激活conda的虚拟环境<ul>
+<li>（Linux） source activate env_name</li>
+<li>（Win）conda activate env_name</li>
+<li>安装django <code>pip install django==1.8</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>django创建项目</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin startproject tulingxueyuan</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>djiango启动项目</p>
+<ul>
+<li><p>1.命令行启动</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Pycharam启动</p>
+<ul>
+<li>需要改manage.py的配置，增加参数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="一、路由系统-urls"><a href="#一、路由系统-urls" class="headerlink" title="一、路由系统 -urls"></a>一、路由系统 -urls</h2><ul>
+<li><p>创建app</p>
+<ul>
+<li><p>app:负责一个具体业务或者一类具体业务的模块</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py startapp teacher</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>路由</p>
+<ul>
+<li>按照具体的请求url，导入到相应业务处理模块的一个功能</li>
+<li>django的信息控制中枢</li>
+<li>本质上是接受的URL和相应处理模块的一个映射</li>
+<li>在接受URL请求的匹配上使用了re</li>
+<li>URL的具体格式请入urls.py中所示。</li>
+</ul>
+</li>
+<li><p>需要关注的两点：</p>
+<ul>
+<li>接受的URL是什么，即如何用RE对传入的URL进行匹配</li>
+<li>已知URL匹配到哪个模块</li>
+</ul>
+</li>
+<li><p>url匹配规则</p>
+<ol>
+<li><p>从上往下写</p>
+</li>
+<li><p>一级一级往下匹配</p>
+</li>
+<li><p>子url一旦被调用，不会返回主url</p>
+</li>
+<li><p>正则以r开头，表示不专一。尖括号(^)和美元符号($)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">r'^one/'</span>  <span class="comment"># 第一个斜杠可以省略，可以匹配/one/two/there</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="1-正常映射"><a href="#1-正常映射" class="headerlink" title="1.正常映射"></a>1.正常映射</h3><ul>
+<li><p>把某一个符号RE的URL映射到失误处理函数中去</p>
+</li>
+<li><pre><code class="python">urlpatterns = [
+    <span class="comment"># Examples:</span>
+    <span class="comment"># url(r'^$', 'beijingtulingxueyuan.views.home', name='home'),</span>
+    <span class="comment"># url(r'^blog/', include('blog.urls')),</span>
+
+    url(<span class="string">r'^admin/'</span>, include(admin.site.urls)),
+    url(<span class="string">r'^normalmap'</span>, do_normarl_map)
+
+]
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 2.URL带参数映射</span><br><span class="line"></span><br><span class="line">- 在时间处理代码中需要由URL传入参数，形如&#x2F;myurl&#x2F;params</span><br><span class="line"></span><br><span class="line">- 参数都是字符串形式，如果需要整数等形式需要自行转换</span><br><span class="line"></span><br><span class="line">- 通常的形式如下,其中432需要经常变化，所以作为参数传入</span><br><span class="line"></span><br><span class="line">  - 尖括号表示以后面内容开头的表达式</span><br><span class="line">  - 元好看代码的是一个参数，里面的内容作为参数传递被调用的函数</span><br><span class="line">  - 参数名称以问号加大写P开头，尖括号里面就是参数的名称</span><br><span class="line">  - 尖括号后面表示正则</span><br><span class="line"></span><br><span class="line">  &#96;&#96;&#96;python</span><br><span class="line">  &#x2F;search&#x2F;page&#x2F;432</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">urlpatterns = [</span><br><span class="line">	url(<span class="string">r'withparam/(?P&lt;year&gt;[0-9]&#123;&#125;)/(?P&lt;month&gt;[0,1][0-9])'</span>, sv.withparam)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+<h3 id="3-URL在app中处理"><a href="#3-URL在app中处理" class="headerlink" title="3. URL在app中处理"></a>3. URL在app中处理</h3><ul>
+<li>如果可以应用URL都集中在首目录下的urls中，可能导致文件过于臃肿</li>
+<li>可以把urls具体功能逐渐分散到各个app中<ul>
+<li>从django.conf.urls 导入include</li>
+<li>注意此时RE部分的写法，自路由不需要在以什么开头</li>
+<li>添加Include导入</li>
+</ul>
+</li>
+<li>使用方法<ul>
+<li>确保include被导入</li>
+<li>写主路由的开头url</li>
+<li>写自路由</li>
+<li>编写views</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-URL中的嵌套参数"><a href="#4-URL中的嵌套参数" class="headerlink" title="4.URL中的嵌套参数"></a>4.URL中的嵌套参数</h3><ul>
+<li><p>捕捉参数的某一部分</p>
+<ul>
+<li><p>例如URL:/index/page-3,需要捕捉数字3作为参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">url(<span class="string">r'index/(page-([0-9]+)/)?$'</span>, sv.myindex),  <span class="comment"># 不太好</span></span><br><span class="line">url(<span class="string">r'index/(?:page-(?P&lt;page_number&gt;[0-9]+)/)?$'</span>, sv.myindex)</span><br><span class="line"><span class="comment"># ?:page 表示忽略该参数</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-传递额外参数"><a href="#5-传递额外参数" class="headerlink" title="5.传递额外参数"></a>5.传递额外参数</h3><ul>
+<li><p>参数不仅仅来自于URL,也可能来自我们自己定义的内容</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url(<span class="string">r'extrem/$'</span>, sv.extremParam, &#123;<span class="string">'name'</span>: <span class="string">"liuying"</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="6-URL的方向解析"><a href="#6-URL的方向解析" class="headerlink" title="6.URL的方向解析"></a>6.URL的方向解析</h2><ul>
+<li>防止硬编码</li>
+<li>本质上是对每一个URL进行命名</li>
+<li>一台再编码的时候使用URL的值，原则上都可以使用反向解析</li>
+</ul>
+<h2 id="二、视图"><a href="#二、视图" class="headerlink" title="二、视图"></a>二、视图</h2><h3 id="1-视图概述"><a href="#1-视图概述" class="headerlink" title="1.视图概述"></a>1.视图概述</h3><ul>
+<li>视图即视图函数，接收web请求，并返回相应的事务处理函数</li>
+<li>相应值符号http协议要求的任何内容，包括json,string,html</li>
+<li>本章忽略事物处理，重点在如何返回处理结果上</li>
+</ul>
+<h3 id="2-其他简单视图"><a href="#2-其他简单视图" class="headerlink" title="2.其他简单视图"></a>2.其他简单视图</h3><ul>
+<li>django.http代码即可查看</li>
+<li>此类视图使用方法基本类似，可以通过return语句返回给浏览器</li>
+</ul>
+<h3 id="3-HttpResponse详解"><a href="#3-HttpResponse详解" class="headerlink" title="3.HttpResponse详解"></a>3.HttpResponse详解</h3><ul>
+<li>方法<ul>
+<li>init:使用也内容实例化HttpResponse对象</li>
+<li>write(content)以文件的方式写</li>
+<li>flush():以文件的方式输出缓存区</li>
+<li>set_cookie(key, values=’’, max_age=None, expires=None):设置cookie<ul>
+<li>key,value都是字符串类型</li>
+<li>max_age是一个整数，表示在指定秒数后过期</li>
+<li>expires是一个datetime或者timedalta对象，回话将在指定的日期/时间过期</li>
+<li>max_age和expires二选一</li>
+<li>如果不指定过期时间，则两个星期后过期</li>
+</ul>
+</li>
+<li>delete_cookie(key):删除指定key的cookie,如果key不存在则什么都没有发生</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-HttpResponseRedirect"><a href="#4-HttpResponseRedirect" class="headerlink" title="4.HttpResponseRedirect"></a>4.HttpResponseRedirect</h3><ul>
+<li>重定向，服务器端跳转</li>
+<li>构造函数的第一个参数用来指向重定向的地址</li>
+</ul>
+<h3 id="5-HttpRequst"><a href="#5-HttpRequst" class="headerlink" title="5.HttpRequst"></a>5.HttpRequst</h3><ul>
+<li>Request介绍<ul>
+<li>服务器接受到http协议的请求后，会根据报文创建HttpRequest对象</li>
+<li>视图函数的第一个参数就是HttpRequest对象</li>
+<li>在django.http模块中定义了HttpRequest对象的API</li>
+</ul>
+</li>
+<li>属性<ul>
+<li>下面除非特别说明，属性都是只读的</li>
+<li>path:一个字符串，表示请求页面的完整路径，不包含域名</li>
+<li>method:一个字符串，表示请求方法</li>
+<li>encoding:一个字符串，表示提交的数据编码方式<ul>
+<li>如果为None,则默认为utf-8</li>
+<li>属性是可写的，可以通过修改它来访问表单使用</li>
+</ul>
+</li>
+<li>GET:一个类似于字典的对象，包含get请求方式的所有参数(推荐get方法)</li>
+<li>POST:一个类似字典的对象，包含post请求方式的素有参数</li>
+<li>FILES:一个类似字典对象，包含所有的上传文件</li>
+<li>COOKIES:一个标准的Python子弟那，包含所有的cookie,键和值均为字符串。</li>
+<li>session:一个既可读也可写的类似字典的对象，表示当前会话<ul>
+<li>只有当Django启用会话的支持时才可用</li>
+<li>详细内容见“状态抱持”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>方法<ul>
+<li>is_ajax():如果请求是通过XMLHttpRequest发起的，则返回True</li>
+<li>QueryDict对象<ul>
+<li>定义在django.http.QueryDict</li>
+<li>request对象的属性GET、POST对象都是QueryDict类型的对象</li>
+<li>与Python字典不同，QueryDict可以用来处理一个键带多个值的情况</li>
+<li>使用方法：<ul>
+<li>get(),根据键获取值<ul>
+<li>只能获取键的一个值</li>
+<li>如果一个键有多个值，则获取最后一个值</li>
+</ul>
+</li>
+<li>getlist(),根据键获取值<ul>
+<li>将键的值以列表返回，可以获取一个键的所有值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>GET属性：<ul>
+<li>QueryDict类型的对象</li>
+<li>包含get请求方法的所有参数</li>
+<li>与url请求地址的参数对应，位于？后面</li>
+<li>参数的格式是键值对，如key=value</li>
+<li>多个参数之间，用&amp;连接，如key1=value1&amp;key2=value2</li>
+<li>键是开发人员定下来的，值是可变的</li>
+</ul>
+</li>
+<li>POST属性<ul>
+<li>QueryDict类型的对象</li>
+<li>包含post请求方式的素有参数</li>
+<li>与form表单中的控件对应</li>
+<li>表单中空间必须有name属性，name为键，value为值<ul>
+<li>checkbox存在一键多值的情况</li>
+</ul>
+</li>
+<li>键是开发人员定下来的，值是可变的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-手动编写一个View"><a href="#6-手动编写一个View" class="headerlink" title="6.手动编写一个View"></a>6.手动编写一个View</h3><ul>
+<li><p>实验目的</p>
+<ul>
+<li>利用django提供的快捷函数手动编写视图处理函数</li>
+<li>返回response，</li>
+</ul>
+</li>
+<li><p>业务处理:</p>
+</li>
+<li><p>利用response的子类</p>
+<ul>
+<li>拿到模板</li>
+<li>拿到数据</li>
+<li>环境变量</li>
+</ul>
+</li>
+<li><p>了解视图运行原理</p>
+</li>
+<li><p>分析：</p>
+<ul>
+<li>django把所有请求封装入request</li>
+<li>django通过urls木块把相应请求和时间处理函数连接起来，做request作为参数返回。</li>
+<li>在相应的处理函数中，我们需要完成两部分<ul>
+<li>处理业务</li>
+<li>把结果封装并且返回，我们可以使用简单的httpResponse</li>
+</ul>
+</li>
+<li>本案例不介绍业务处理，把目光集中在渲染结果并返回</li>
+</ul>
+</li>
+<li><p>常用函数</p>
+<ul>
+<li>render(request, template_name[,content_instance]):<ul>
+<li>使用模板和一个给定的上下文环境，返回一个渲染的httprespnse</li>
+<li>request:django的传入请求</li>
+<li>template_name:模板名称</li>
+<li>content_instance:上下文环境</li>
+</ul>
+</li>
+<li>render_to_response(推荐使用上面的)</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-系统内建视图"><a href="#7-系统内建视图" class="headerlink" title="7.系统内建视图"></a>7.系统内建视图</h3><ul>
+<li>系统内建视图，可以直接使用</li>
+<li>比如404,500,401,403</li>
+</ul>
+<h3 id="8-基于类的视图"><a href="#8-基于类的视图" class="headerlink" title="8.基于类的视图"></a>8.基于类的视图</h3><ul>
+<li>和基于函数的视图的优势和区别<ul>
+<li>可以面向对象变成</li>
+</ul>
+</li>
+<li>概述<ul>
+<li>核心是允许使用不同的实例和方法来响应不同的HTTP请求方法，从而避开分支条件实现</li>
+<li>as_view函数作为类的可调用库，该方法创建一个实例并调用dispatch方法，按照类方法去请求。如果类方法没有定义，则引发HttpResponseNotAllow</li>
+<li>类属性使用<ul>
+<li>在类定义的时候直接覆盖</li>
+<li>在调用as_view的时候直接作为参数使用，例如：</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="三、模型"><a href="#三、模型" class="headerlink" title="三、模型"></a>三、模型</h2><h3 id="1-ORM"><a href="#1-ORM" class="headerlink" title="1.ORM"></a>1.ORM</h3><ul>
+<li>ObjectRelationMap实体关系映射,把面向对象的思想转化为关系型数据库</li>
+<li>类对应表格</li>
+<li>类的属性对应表中的字段</li>
+<li>在对应的models.py文件中定义class</li>
+</ul>
+<h3 id="2-django链接数据库"><a href="#2-django链接数据库" class="headerlink" title="2.django链接数据库"></a>2.django链接数据库</h3><ul>
+<li><p>自带默认数据库sqllite3</p>
+<ul>
+<li>轻量级数据库</li>
+<li>轻量级</li>
+</ul>
+</li>
+<li><p>建议开发使用sqllite3,部署用mysql之类的数据库</p>
+<ul>
+<li><p>django链接数据库,切换数据库在settings中设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">DATABASES &#x3D; [</span><br><span class="line">	&#39;default&#39; &#x3D; &#123;</span><br><span class="line">		&#39;ENGINE&#39;: &#39;django.db.backends.mysql&#39;,</span><br><span class="line">		&#39;NAME&#39;: &#39;数据库名&#39;,</span><br><span class="line">		&#39;PASSWORD&#39;: &#39;数据库密码&#39;,</span><br><span class="line">		&#39;HOST&#39;:&#39;127.0.0.01&#39;,</span><br><span class="line">		&#39;PORT&#39;:&#39;3306&#39;,</span><br><span class="line">	&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>需要在项目文件’init’中导入pymysql</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import pymysql</span><br><span class="line">pymysql.install_as_MySQLdb()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-model类的使用"><a href="#3-model类的使用" class="headerlink" title="3.model类的使用"></a>3.model类的使用</h3><ul>
+<li><p>定义和数据库表的映射的分类</p>
+<ul>
+<li>在app下的model.py</li>
+<li>所有需要使用的ORM的class必须是models.Mondel的子类</li>
+<li>字段的类型都必须使用modles.xxx，不能使用Python的</li>
+<li>在django中，model负责和数据库交互。</li>
+</ul>
+</li>
+<li><p>字段常用参数</p>
+<ul>
+<li>max_length:规定数值的最大长度</li>
+<li>blank:是否允许字段为空，默认不允许</li>
+<li>null:在DB中是否保存为null,默认为false</li>
+<li>default:默认值</li>
+<li>unique:唯一值</li>
+<li>verbose_name:假名</li>
+</ul>
+</li>
+<li><p>数据库的迁移</p>
+<ol>
+<li><p>在命令行中，生成数据迁移语句（自动生成sql语句）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 manage.py makemigrations</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在命令行中，输入数据迁移指定</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 manage.py migrate</span><br></pre></td></tr></table></figure>
+
+<p>ps:如果迁移中出现没有变化或者保存，可以尝试强制迁移</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 强制迁移</span></span><br><span class="line">python3 manage.py makemigrations 应用名</span><br><span class="line">python3 manage.py migrate 应用名</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对于默认数据库，为了避免出现混乱，为了避免出现混乱，可以把自带的migrations和没有数据的sqlite3删除</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="4-利用shell查看数据库中的数据"><a href="#4-利用shell查看数据库中的数据" class="headerlink" title="4.利用shell查看数据库中的数据"></a>4.利用shell查看数据库中的数据</h3><ol>
+<li><p>启动命令行，python3 manage.py shell</p>
+<p>注意点：对ORM的操作分为静态函数和非静态函数两种，静态函数是指内存只有一份，非静态指每个实例掌握一份</p>
+</li>
+<li><p>在命令行中导入对应的映射类</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> 应用名.models <span class="keyword">import</span> 类名</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用objects属性操作数据库，objects是模型实际和数据库进行交互的</p>
+</li>
+<li><p>查询命令</p>
+<ul>
+<li>类名.objects.all()查询数据库表中的所有内容，返回一个QueryList</li>
+<li>类名.objects.filter(过滤条件)</li>
+</ul>
+</li>
+<li><p>常用查找格式：</p>
+<ol>
+<li><p>通用查找：属性名_   _（用下面的内容）= 值</p>
+<ul>
+<li><p>gt:大于</p>
+</li>
+<li><p>gte:大于等于</p>
+<pre><code>- lt:小于</code></pre></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>lte:小于等于</p>
+</li>
+<li><p>range:范围</p>
+</li>
+<li><p>year:年费</p>
+</li>
+<li><p>isnull</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Teacher.objects.filter(age__gte=<span class="number">18</span>)  <span class="comment"># 查询年纪大于等于18的老师</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="2">
+<li>模糊查找<ul>
+<li>exact:精确等于</li>
+<li>iexact:不区分大小写</li>
+<li>contains:包含</li>
+<li>startwith:以什么开头</li>
+<li>endwith:以什么结尾</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="5-数据库表的关系"><a href="#5-数据库表的关系" class="headerlink" title="5.数据库表的关系"></a>5.数据库表的关系</h3><ol>
+<li><p>多表联查，利用多个表联合查找一项信息或者多项信息。</p>
+<ul>
+<li><p>一比一关系</p>
+<ul>
+<li><p>建立关系：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">models.OneToOneField(School)  # 括号里面有类</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加元素：</p>
+<ul>
+<li><p>先添加没有关系的一边，直接实例化保存即可。</p>
+</li>
+<li><p>有关系的那一边，此时可以实例化或者使用create方法。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Manager.object.create(manager_id=?,manager_name='?',my_school=?)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>查询元素</p>
+<ul>
+<li><p>由子表差母表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Manger.objects.get(manager_name=<span class="string">'大拿'</span>).my_school.school_name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>由母表查子表，使用双下划线</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">School.objects.get(manager__manager_name=<span class="string">'大拿'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>修改元素</p>
+<ul>
+<li><p>查询后直接赋值修改即可。（单个修改）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = School.objects.get(school_id=<span class="number">1</span>)</span><br><span class="line">s.school_name = <span class="string">'南京图灵学院'</span></span><br><span class="line">s.save()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多个修改（使用update）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ss = School.objects.all()</span><br><span class="line">ss.update(school_name=<span class="string">'图灵学院'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>一对多关系</p>
+<ul>
+<li><p>一个表格的一个数据项、对象等，可以很多个另外一个表格的多个数据项。如：一个学校有多个老师。</p>
+</li>
+<li><p>使用方法：</p>
+<ul>
+<li><p>使用ForengnKey</p>
+</li>
+<li><p>在多的那边定义，在Teacher那里定义，被学校约束,需要字符串。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">schools = models.ForeignKey(<span class="string">"School"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>增加</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xx.objects.create(xx=xx)</span><br><span class="line">new一个</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查找</p>
+<ul>
+<li><p>如果知道老师，查学校，则通过增加的关系属性，直接使用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">t1.schools.school_name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>知道学校，查所有老师，则系统自动老师的名字下添加了set</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">teacher_set.all()</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>多对多关系</p>
+<ul>
+<li><p>表示一个表的数据可以拥有对方表格的多项数据，反之亦然。</p>
+</li>
+<li><p>使用上，在任意乙方，使用ManyToMany定义。</p>
+</li>
+<li><p><strong>增加</strong></p>
+<ul>
+<li>添加老师，需要先save一个空值，再sutdent.teachers.add()</li>
+</ul>
+</li>
+<li><p><strong>查询</strong></p>
+<ul>
+<li><p>和一对多方法一样</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">t1.student_set.all()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="四、模板系统"><a href="#四、模板系统" class="headerlink" title="四、模板系统"></a>四、模板系统</h2><h3 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h3><ul>
+<li>模板：一组相同或者想死的页面，在需要个性化的地方进行留白，需要的时候拿数据填充就可以使用。</li>
+</ul>
+<h3 id="2-使用步骤"><a href="#2-使用步骤" class="headerlink" title="2. 使用步骤"></a>2. 使用步骤</h3><ol>
+<li>在settings中进行设置：TEMPLATES.<ol>
+<li>注意：路径用BASE_DIR拼接，不要用绝对路径。</li>
+<li>新建的文件夹建议使用templates命名，约定俗成。</li>
+</ol>
+</li>
+<li>在templates文件夹下编写模板并调用。</li>
+</ol>
+<h3 id="3-模板变量"><a href="#3-模板变量" class="headerlink" title="3.模板变量"></a>3.模板变量</h3><ul>
+<li><p>变量表示方式，:var_name:变量名</p>
+</li>
+<li><p>系统调用模板的时候，会用相应的数据查找相应的变量名称，如果能找到，则找到渲染，找不到也不会报错。</p>
+</li>
+<li><p>调用方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">render(request,<span class="string">'template_name'</span>,content=dict())</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="4-模板的标签"><a href="#4-模板的标签" class="headerlink" title="4.模板的标签"></a>4.模板的标签</h3><ul>
+<li><p>for标签</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;%  <span class="keyword">for</span> .. <span class="keyword">in</span> .. %&#125;</span><br><span class="line">循环语句</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>if标签，用来判断条件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;%  <span class="keyword">if</span> %&#125;</span><br><span class="line">	代码<span class="number">1</span></span><br><span class="line">&#123;% <span class="keyword">elif</span> %&#125;</span><br><span class="line">	代码<span class="number">1</span></span><br><span class="line">&#123;% <span class="keyword">else</span> %&#125;</span><br><span class="line">	代码<span class="number">1</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>csrf标签</p>
+<ul>
+<li><p>跨站伪造标签</p>
+</li>
+<li><p>在提交表单的时候，表单页面需要加上(同时需要设置开启。)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% csrf_token %&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-session"><a href="#5-session" class="headerlink" title="5.session"></a>5.session</h2><h3 id="1-作用"><a href="#1-作用" class="headerlink" title="1. 作用"></a>1. 作用</h3><ol>
+<li>为了应对http协议的无状态性</li>
+<li>为了保持用户比较敏感的信息</li>
+<li>输入request的一个数学<h3 id="2-常用操作"><a href="#2-常用操作" class="headerlink" title="2. 常用操作"></a>2. 常用操作</h3></li>
+<li>request.session.get(key, defaultValue) # defualtvalue为请求不到的默认返回值</li>
+<li>request.session.clear()  # 清空session</li>
+<li>request.session[key] = value  # 赋值</li>
+<li>request.session.flush() #删除当前的session和cookies</li>
+<li>del requst.session  # 删除</li>
+</ol>
+<h2 id="6-分页"><a href="#6-分页" class="headerlink" title="6.分页"></a>6.分页</h2><ul>
+<li><p>django提供了现成的分液器用来对结果进行分页。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> djangdo.core.paginator <span class="keyword">import</span> Paginator</span><br><span class="line">p = Paginator()</span><br><span class="line"><span class="comment"># 两个参数。1.数据来源，2单页返回数量</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/17/wps%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -975,7 +2146,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -986,7 +2157,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -997,7 +2168,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
