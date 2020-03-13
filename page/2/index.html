@@ -282,6 +282,207 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tlntin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Python博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/" itemprop="url">Boss直聘爬虫实战</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-18T21:00:00+08:00">
+                2020-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python%E7%88%AC%E8%99%AB/" itemprop="url" rel="index">
+                    <span itemprop="name">Python爬虫</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li><p>新建项目-新建PythonFile</p>
+</li>
+<li><p>安装爬虫模块</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>requests的常用函数</p>
+<ul>
+<li>request.get()，对应http协议的get请求，也就是把网页下载下来。</li>
+<li>request.post()，对应Http协议的post请求，就是把数据上传到网页服务器。</li>
+</ul>
+</li>
+<li><p>观察boss直聘的url。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.zhipin.com/c101250100-p110101/</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>通过观察发现，后面应该是城市代码和职位代码</li>
+<li>通过检查-network发现，城市代码应该是储存在city.json里面</li>
+<li>职位代码应该是储存在position.json里面</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220212318163.png" alt="image-20200220212318163"></p>
+<p><img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220212422591.png" alt="image-20200220212422591"></p>
+<p>通过观察：city.json的url为</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.zhipin.com/wapi/zpCommon/data/city.json</span><br></pre></td></tr></table></figure>
+
+<p>postion.json的url为</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.zhipin.com/wapi/zpCommon/data/position.json</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220212709237.png" alt="image-20200220212709237"></p>
+<h2 id="爬取城市代码"><a href="#爬取城市代码" class="headerlink" title="爬取城市代码"></a>爬取城市代码</h2><ul>
+<li><p>测试连接</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="comment"># requests--&gt;请求</span></span><br><span class="line">url = <span class="string">'https://www.zhipin.com/wapi/zpCommon/data/city.json'</span>  <span class="comment"># boss直聘城市链接</span></span><br><span class="line">response = requests.get(url)  </span><br><span class="line">print(response)  <span class="comment"># 打印响应</span></span><br></pre></td></tr></table></figure>
+
+<p>返回值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Response [<span class="number">200</span>]&gt;</span><br></pre></td></tr></table></figure>
+
+<p>200：代表返回成功</p>
+<p>404：网络连接失败</p>
+<p>500：服务器奔溃</p>
+</li>
+<li><p>加入浏览器伪装头’user-agent’，防止被服务器发现你是爬虫</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">headers = &#123;<span class="string">'user-agent'</span>: <span class="string">'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36'</span>&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第一次打印</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br><span class="line">url = <span class="string">'https://www.zhipin.com/wapi/zpCommon/data/city.json'</span>  <span class="comment"># boss直聘城市代码</span></span><br><span class="line">headers = &#123;<span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (X11; Linux x86_64) \</span></span><br><span class="line"><span class="string">AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36'</span>&#125;</span><br><span class="line">response = requests.get(url, headers=headers)</span><br><span class="line">data = response.json()  <span class="comment"># 从返回对象中提取json</span></span><br><span class="line">pprint(data)</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<p><img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220223601456.png" alt="image-20200220223601456"></p>
+<p>根据上图观察，返回的json可以当成是一个多层字典。</p>
+</li>
+</ul>
+<p>  数据均在<code>zpData\cityList</code>下，于是对zpData进行第一次解包。</p>
+<p>  <img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220230905431.png" alt="image-20200220230905431"></p>
+<p>  对cityList进行第二次解包。</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> pprint <span class="keyword">import</span> pprint</span><br><span class="line">url = <span class="string">'https://www.zhipin.com/wapi/zpCommon/data/city.json'</span>  <span class="comment"># boss直聘城市代码</span></span><br><span class="line">headers = &#123;<span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (X11; Linux x86_64) \</span></span><br><span class="line"><span class="string">AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.106 Safari/537.36'</span>&#125;</span><br><span class="line">response = requests.get(url, headers=headers)</span><br><span class="line">data = response.json()  <span class="comment"># 从返回对象中提取json</span></span><br><span class="line">data1 = data[<span class="string">'zpData'</span>][<span class="string">'cityList'</span>]</span><br><span class="line"><span class="comment"># pprint(data1)</span></span><br><span class="line"><span class="keyword">for</span> ii <span class="keyword">in</span> data1:</span><br><span class="line">    province = ii[<span class="string">'name'</span>]  <span class="comment"># 省名</span></span><br><span class="line">    province_code = ii[<span class="string">'code'</span>]  <span class="comment"># 省对应的代码</span></span><br><span class="line">    city_list = ii[<span class="string">'subLevelModelList'</span>]</span><br><span class="line">    <span class="keyword">for</span> ci <span class="keyword">in</span> city_list:</span><br><span class="line">      city = ci[<span class="string">'name'</span>]  <span class="comment"># 城市名</span></span><br><span class="line">        city_code = ci[<span class="string">'code'</span>]  <span class="comment"># 城市代码</span></span><br><span class="line">      print(province, <span class="string">'\t'</span>, province_code, <span class="string">'\t'</span>, city, <span class="string">'\t'</span>, city_code)</span><br></pre></td></tr></table></figure>
+
+<p>  <img src="/2020/02/18/Boss%E7%9B%B4%E8%81%98%E7%88%AC%E8%99%AB%E5%AE%9E%E6%88%98/image-20200220230342508.png" alt="image-20200220230342508"></p>
+<p>  省和城市代码就爬取完毕了，直接粘贴到excel就可以。至于如何直接导出excel，后面再说。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2146,7 +2347,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

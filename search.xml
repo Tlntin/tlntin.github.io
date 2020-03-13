@@ -1110,6 +1110,67 @@ print(a)  <span class="comment"># 输出结果: 我爱你，中国</span>
       </tags>
   </entry>
   <entry>
+    <title>python复习100天--第7天</title>
+    <url>/2020/03/13/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC7%E5%A4%A9/</url>
+    <content><![CDATA[<h2 id="模块和包"><a href="#模块和包" class="headerlink" title="模块和包"></a>模块和包</h2><h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><ul>
+<li>模块是一个包含所有的你定义的或者别人定义的函数和变量的文件，后缀为<code>.py</code></li>
+<li>模块一般使用import导入模块名，即导入文件名，然后使用模块名加函数或者变量调用</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 第一步，自己动手写一个模块</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    随便写一个函数，用来打印"hello world"</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    print(<span class="string">'hello world'</span>)</span><br><span class="line"><span class="comment"># 写完后重命名为test.py文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 调用模块</span></span><br><span class="line"><span class="keyword">import</span> test</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">test.fun1()  <span class="comment"># 调用模块的函数</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">hello world</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>模块也可以使用from ..模块.. import ..函数或者类..调用，这样可以直接使用函数或者类或者变量</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> test <span class="keyword">import</span> fun1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fun1()</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">hello world</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果不确定模块内有什么函数或者类，可以用<code>*</code>号代替，这样就会导入模块中所有函数和类或者变量了</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> test <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fun1()</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">hello world</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>导入函数或者类后，可以用as对其重命名，这样可以少写一些字。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> test <span class="keyword">import</span> fun1 <span class="keyword">as</span> f1</span><br><span class="line"><span class="keyword">import</span> test <span class="keyword">as</span> t</span><br><span class="line"></span><br><span class="line">f1()</span><br><span class="line">t.fun1()</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">hello world</span></span><br><span class="line"><span class="string">hello world</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="name属性"><a href="#name属性" class="headerlink" title="name属性"></a>name属性</h3><ul>
+<li>为了让特定的代码在模块中私有化，即模块B导入模块A的时候，模块A有部分代码模块B运行不了，只有模块A可以运行</li>
+<li>name属性可以用来做模块测试</li>
+<li>使用方法：<code>if __name__ = &#39;__main__&#39;:</code></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 第一步，自己动手写一个模块</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    随便写一个函数，用来打印"hello world"</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    print(<span class="string">'hello world'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun2</span><span class="params">()</span>:</span></span><br><span class="line">        print(<span class="string">'这个函数只能test模块使用'</span>)</span><br><span class="line">    fun1()</span><br><span class="line">    fun2()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 写完后重命名为test.py文件</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 运行test模块后的结果</span></span><br><span class="line"><span class="string">hello world</span></span><br><span class="line"><span class="string">这个函数只能test模块使用</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> test <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">fun1()</span><br><span class="line">fun2()</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">hello world</span></span><br><span class="line"><span class="string">Traceback (most recent call last):</span></span><br><span class="line"><span class="string">  File "/home/tlntin/PycharmProjects/study/002.py", line 4, in &lt;module&gt;</span></span><br><span class="line"><span class="string">    fun2()</span></span><br><span class="line"><span class="string">NameError: name 'fun2' is not defined</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment"># 在其它模块导入test模块后，运行fun2函数失败，提示该函数未定义</span></span><br><span class="line"><span class="comment"># main函数下的代码只能在该模块运行，不能被导入运行</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>dir</code>函数可以显示出模块中所有函数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> test</span><br><span class="line">print(dir(test))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'fun1']</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="标准模块"><a href="#标准模块" class="headerlink" title="标准模块"></a>标准模块</h3><ul>
+<li>Python自带的模块，不需要使用第三方<code>pip</code>或者<code>conda</code>安装即可使用</li>
+<li>常见的比如<code>sys</code>、<code>os</code>、<code>math</code></li>
+</ul>
+<h3 id="包"><a href="#包" class="headerlink" title="包"></a>包</h3><ul>
+<li>可以理解为模块的集合</li>
+<li>把模块理解为<code>py</code>文件，那么包就是文件夹</li>
+<li>导入包的方法和导入模块的方法一样</li>
+<li>常用方法： from ..<code>包.模块</code>.. import ..类或者函数..</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> os.path <span class="keyword">import</span> exists</span><br><span class="line"></span><br><span class="line">print(exists(<span class="string">'test.py'</span>))  <span class="comment"># 验证文件路径是否存在</span></span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">True</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>python复习</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>从无到有免费撸一个博客</title>
     <url>/2040/02/18/%E4%BB%8E%E6%97%A0%E5%88%B0%E6%9C%89%E5%85%8D%E8%B4%B9%E6%92%B8%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ol>
