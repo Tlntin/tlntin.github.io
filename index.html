@@ -712,7 +712,7 @@
 <li><p>使用方法2</p>
 </li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 写一个空白文件并且保存</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'002.txt'</span>, <span class="string">'wt'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(<span class="string">'hehe'</span>)  <span class="comment"># 写入内容</span></span><br><span class="line">    f.close()  <span class="comment"># 关闭文件</span></span><br><span class="line">    <span class="comment"># 写完后，你的路径下会多一个002.txt文件</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 写一个空白文件并且保存</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'002.txt'</span>, <span class="string">'wt'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(<span class="string">'hehe'</span>)  <span class="comment"># 写入内容</span></span><br><span class="line">    <span class="comment"># 这里不需要写f.close()，因为文件会自动关闭。</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="常用读写模式"><a href="#常用读写模式" class="headerlink" title="常用读写模式"></a>常用读写模式</h3><ul>
 <li><p>open函数中共有两个关键参数，还有一个可选参数：编码方式（文本模式下默认utf-8）</p>

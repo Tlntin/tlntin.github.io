@@ -1188,7 +1188,7 @@ print(a)  <span class="comment"># 输出结果: 我爱你，中国</span>
 <li><p>使用方法2</p>
 </li>
 </ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 写一个空白文件并且保存</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'002.txt'</span>, <span class="string">'wt'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(<span class="string">'hehe'</span>)  <span class="comment"># 写入内容</span></span><br><span class="line">    f.close()  <span class="comment"># 关闭文件</span></span><br><span class="line">    <span class="comment"># 写完后，你的路径下会多一个002.txt文件</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 写一个空白文件并且保存</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'002.txt'</span>, <span class="string">'wt'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(<span class="string">'hehe'</span>)  <span class="comment"># 写入内容</span></span><br><span class="line">    <span class="comment"># 这里不需要写f.close()，因为文件会自动关闭。</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="常用读写模式"><a href="#常用读写模式" class="headerlink" title="常用读写模式"></a>常用读写模式</h3><ul>
 <li><p>open函数中共有两个关键参数，还有一个可选参数：编码方式（文本模式下默认utf-8）</p>
@@ -1960,52 +1960,6 @@ print(a)  <span class="comment"># 输出结果: 我爱你，中国</span>
       </tags>
   </entry>
   <entry>
-    <title>Xpath</title>
-    <url>/2020/02/17/XPath/</url>
-    <content><![CDATA[<ul>
-<li>在XML文件中查找信息的一套规则/语言，根据XML的元素或者属性进行遍历。</li>
-</ul>
-<h2 id="Xpath-开发工具"><a href="#Xpath-开发工具" class="headerlink" title="Xpath 开发工具"></a>Xpath 开发工具</h2><ul>
-<li>开源表达式编辑工具：XMLQuire</li>
-<li>Chorme插件：Xpath Helper</li>
-</ul>
-<h2 id="选取节点"><a href="#选取节点" class="headerlink" title="选取节点"></a>选取节点</h2><ul>
-<li>nodename:选取此节点的所有节点</li>
-<li>/ :根节点</li>
-<li>// :选取节点，不考虑位置</li>
-<li>. ：选取当前节点</li>
-<li>.. ：选取当前节点的父节点</li>
-<li>@ ：选取属性</li>
-<li>/ :一般安装路径查找，表示它的子节点</li>
-<li>// :表示它的后代，包括子、孙<ul>
-<li>//Age[@Dtail] : 选取带Detail的Age元素</li>
-</ul>
-</li>
-<li>谓语-Predicates<ul>
-<li>/School/Student[1]  :选取School下面第一个节点</li>
-<li>/School/Student[last()]  : 选取School下面最后一个节点</li>
-<li>/School/Student[position()&lt;3]  : 选取School下面前三个节点</li>
-<li>//Student[@score=”99”]  选取属性带有99的节点</li>
-</ul>
-</li>
-</ul>
-<h2 id="Xpath的一些操作"><a href="#Xpath的一些操作" class="headerlink" title="Xpath的一些操作"></a>Xpath的一些操作</h2><ul>
-<li>| ：或者<ul>
-<li>//Student | //Teacher 2选1</li>
-</ul>
-</li>
-<li>其余不常见Xpath运算符合 +， - ，*， div, &gt;, &lt;</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python爬虫</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Django学习笔记</title>
     <url>/2020/02/17/Django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<ul>
@@ -2574,6 +2528,52 @@ print(a)  <span class="comment"># 输出结果: 我爱你，中国</span>
       <tags>
         <tag>python</tag>
         <tag>Web开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Xpath</title>
+    <url>/2020/02/17/XPath/</url>
+    <content><![CDATA[<ul>
+<li>在XML文件中查找信息的一套规则/语言，根据XML的元素或者属性进行遍历。</li>
+</ul>
+<h2 id="Xpath-开发工具"><a href="#Xpath-开发工具" class="headerlink" title="Xpath 开发工具"></a>Xpath 开发工具</h2><ul>
+<li>开源表达式编辑工具：XMLQuire</li>
+<li>Chorme插件：Xpath Helper</li>
+</ul>
+<h2 id="选取节点"><a href="#选取节点" class="headerlink" title="选取节点"></a>选取节点</h2><ul>
+<li>nodename:选取此节点的所有节点</li>
+<li>/ :根节点</li>
+<li>// :选取节点，不考虑位置</li>
+<li>. ：选取当前节点</li>
+<li>.. ：选取当前节点的父节点</li>
+<li>@ ：选取属性</li>
+<li>/ :一般安装路径查找，表示它的子节点</li>
+<li>// :表示它的后代，包括子、孙<ul>
+<li>//Age[@Dtail] : 选取带Detail的Age元素</li>
+</ul>
+</li>
+<li>谓语-Predicates<ul>
+<li>/School/Student[1]  :选取School下面第一个节点</li>
+<li>/School/Student[last()]  : 选取School下面最后一个节点</li>
+<li>/School/Student[position()&lt;3]  : 选取School下面前三个节点</li>
+<li>//Student[@score=”99”]  选取属性带有99的节点</li>
+</ul>
+</li>
+</ul>
+<h2 id="Xpath的一些操作"><a href="#Xpath的一些操作" class="headerlink" title="Xpath的一些操作"></a>Xpath的一些操作</h2><ul>
+<li>| ：或者<ul>
+<li>//Student | //Teacher 2选1</li>
+</ul>
+</li>
+<li>其余不常见Xpath运算符合 +， - ，*， div, &gt;, &lt;</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python爬虫</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
       </tags>
   </entry>
   <entry>
