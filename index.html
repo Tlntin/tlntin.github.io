@@ -604,6 +604,475 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/15/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC8%E5%A4%A9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tlntin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Python博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/03/15/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC8%E5%A4%A9/" itemprop="url">python复习100天--第8天</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-15T21:00:24+08:00">
+                2020-03-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python%E5%A4%8D%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">python复习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h2><h3 id="简单读写"><a href="#简单读写" class="headerlink" title="简单读写"></a>简单读写</h3><ul>
+<li>python常使用open函数对文件进行读写，返回一个文件操作对象</li>
+<li>open函数用于打开文件，write方法写入文件对象，close关闭文件对象。</li>
+<li>使用方法1</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 写一个空白文件并且保存</span></span><br><span class="line">f = open(<span class="string">'001.txt'</span>, <span class="string">'wt'</span>)</span><br><span class="line">f.write(<span class="string">'hehe'</span>)  <span class="comment"># 写入内容</span></span><br><span class="line">f.close()  <span class="comment"># 关闭文件</span></span><br><span class="line"><span class="comment"># 写完后，你的路径下会多一个001.txt文件</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>通常来说，用Python打开文件后需要关闭该文件，否则容易引起内存泄露</p>
+</li>
+<li><p>为了防止忘记关文件，Python可以使用with open() as xx的方法读写文件。</p>
+</li>
+<li><p>使用方法2</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 写一个空白文件并且保存</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'002.txt'</span>, <span class="string">'wt'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(<span class="string">'hehe'</span>)  <span class="comment"># 写入内容</span></span><br><span class="line">    f.close()  <span class="comment"># 关闭文件</span></span><br><span class="line">    <span class="comment"># 写完后，你的路径下会多一个002.txt文件</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="常用读写模式"><a href="#常用读写模式" class="headerlink" title="常用读写模式"></a>常用读写模式</h3><ul>
+<li><p>open函数中共有两个关键参数，还有一个可选参数：编码方式（文本模式下默认utf-8）</p>
+</li>
+<li><p>关键参数分别为读写的文件名和读写模式</p>
+</li>
+<li><p>读写模式由两部分构成，一：读取方式；二：读取类型</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">读写方式</th>
+<th align="center">英文全称</th>
+<th align="center">使用结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">w</td>
+<td align="center">write</td>
+<td align="center">覆盖写入，即不考虑原来文件是否存在，也不考虑文件是否存在内容，均对其覆盖重建文件。</td>
+</tr>
+<tr>
+<td align="center">r</td>
+<td align="center">read</td>
+<td align="center">读取文件，读取的文件必须存在，如果不存在会保存。</td>
+</tr>
+<tr>
+<td align="center">a</td>
+<td align="center">append</td>
+<td align="center">追加写入，即在末尾添加新内容。如果不存在该文件，则自动创建新文件。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">读取类型</th>
+<th align="center">英文全称</th>
+<th align="center">使用结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">t</td>
+<td align="center">text</td>
+<td align="center">按文本类型对文件进行操作，t可以省略。txt,json,xml,html都可以看成是文本。</td>
+</tr>
+<tr>
+<td align="center">b</td>
+<td align="center">binaray</td>
+<td align="center">按二进制进行操作。一般来说，像图片，音乐，视频都是用二进制进行操作。</td>
+</tr>
+</tbody></table>
+<ul>
+<li><code>+</code>号可以用来对文件进行读写，如果是<code>w+</code>、<code>r+</code>则为头写入，即覆盖写入，<code>a+</code>则为末尾追加写入。</li>
+<li>所有模式大全</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>r</td>
+<td>只读文本模式打开，需要文件存在。等同于rt。</td>
+</tr>
+<tr>
+<td>rb</td>
+<td>只读二进制模式打开，需要文件存在。</td>
+</tr>
+<tr>
+<td>r+</td>
+<td>读写文本模式打开，如果是写入则会覆盖源文件。</td>
+</tr>
+<tr>
+<td>rb+</td>
+<td>读写二进制模式打开，如果是写入则会覆盖。</td>
+</tr>
+<tr>
+<td>w</td>
+<td>写入文本模式打开，如果不存在则创建新文件。如果存在则覆盖源文件内容。</td>
+</tr>
+<tr>
+<td>w+</td>
+<td>读写文本模式打开，比w多了一个读取功能。</td>
+</tr>
+<tr>
+<td>wb</td>
+<td>写入二进制文件。</td>
+</tr>
+<tr>
+<td>wb+</td>
+<td>读写二进制文件</td>
+</tr>
+<tr>
+<td>a</td>
+<td>追加写入文本模式</td>
+</tr>
+<tr>
+<td>ab</td>
+<td>追加写入二进制模式</td>
+</tr>
+<tr>
+<td>a+</td>
+<td>追加写入+读取文本模式</td>
+</tr>
+<tr>
+<td>ab+</td>
+<td>追加写入+读取二进制模式</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>读写文本模式对比（二进制模式同上）</p>
+<table>
+<thead>
+<tr>
+<th align="center">功能</th>
+<th align="center">r</th>
+<th align="center">r+</th>
+<th align="center">w</th>
+<th align="center">w+</th>
+<th align="center">a</th>
+<th align="center">a+</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">读</td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td align="center">写</td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td align="center">创建</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td align="center">覆盖</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">从开始读写</td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td align="center">*</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">从结尾读写</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">*</td>
+<td align="center">*</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>总结就是：</p>
+<ul>
+<li><code>+</code>可以读取写入</li>
+<li>r只能读，w只能覆盖写，a是追加写。</li>
+<li>r+不能打开不存在的文件，w+和a+可以。</li>
+<li>r+和w+都是从头开始读取写入，a+是从上次结尾处读取写入。</li>
+</ul>
+</li>
+</ul>
+<h3 id="文件读取"><a href="#文件读取" class="headerlink" title="文件读取"></a>文件读取</h3><ul>
+<li>文件读取必须保证文件已经打开，常使用read方法进行读取。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 自己创建一个“静夜思.txt”，将诗的内容复制进去</span></span><br><span class="line"><span class="comment"># 打开静夜思.txt，读取该文件</span></span><br><span class="line">f = open(<span class="string">'静夜思.txt'</span>, <span class="string">'rt'</span>)</span><br><span class="line">str1 = f.read()  <span class="comment"># 可以在括号里面输入数字，表示读取多少个字符，</span></span><br><span class="line"><span class="comment"># 不输入默认读取所有字符</span></span><br><span class="line">print(str1)</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">床前明月光，疑是地上霜。</span></span><br><span class="line"><span class="string">举头望明月，低头思故乡。</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>也可以使用readline函数读取单行</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 自己创建一个“静夜思.txt”，将诗的内容复制进去</span></span><br><span class="line"><span class="comment"># 打开静夜思.txt，读取该文件</span></span><br><span class="line">f = open(<span class="string">'静夜思.txt'</span>, <span class="string">'rt'</span>)</span><br><span class="line">str1 = f.readline()  <span class="comment"># 第一次读取第一行</span></span><br><span class="line">str2 = f.readline()  <span class="comment"># 第二次读取第二行</span></span><br><span class="line">print(str1, str2)</span><br><span class="line">f.close()</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">床前明月光，疑是地上霜。</span></span><br><span class="line"><span class="string">举头望明月，低头思故乡。</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>也可以使用readlines一次性读取所有行，读取结果是一个列表。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 自己创建一个“静夜思.txt”，将诗的内容复制进去</span></span><br><span class="line"><span class="comment"># 打开静夜思.txt，读取该文件</span></span><br><span class="line">f = open(<span class="string">'静夜思.txt'</span>, <span class="string">'rt'</span>)</span><br><span class="line">list1 = f.readlines()</span><br><span class="line">print(list1)</span><br><span class="line">f.close()</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">['床前明月光，疑是地上霜。\n', '举头望明月，低头思故乡。']</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>tell方法获取读取的指针所在位置。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 自己创建一个“静夜思.txt”，将诗的内容复制进去</span></span><br><span class="line"><span class="comment"># 打开静夜思.txt，读取该文件</span></span><br><span class="line">f = open(<span class="string">'静夜思.txt'</span>, <span class="string">'rt'</span>)</span><br><span class="line">print(<span class="string">'文件操作前指针位置'</span>, f.tell(), <span class="string">'\n'</span>)</span><br><span class="line">str1 = f.readline()</span><br><span class="line">print(<span class="string">'读取一行后的指针位置'</span>, f.tell(), <span class="string">'\n'</span>)</span><br><span class="line">str2 = f.readline()</span><br><span class="line">print(<span class="string">'读取所有内容后的指针位置'</span>, f.tell(), <span class="string">'\n'</span>)</span><br><span class="line">print(str1, str2)</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">文件操作前指针位置 0 </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">读取一行后的指针位置 37 </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">读取所有内容后的指针位置 73 </span></span><br><span class="line"><span class="string">xulieh</span></span><br><span class="line"><span class="string">床前明月光，疑是地上霜。</span></span><br><span class="line"><span class="string">举头望明月，低头思故乡。</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>seek方法可以让读取写入的指针进行跳转。</p>
+</li>
+<li><p>使用方法：f.seek(x, mode)</p>
+</li>
+<li><p>mode共有三种，0：代表从起始位置开始算，1：代表从当前位置往后移动，2代表从结尾的位置往前移动，表示导入第x个位置。</p>
+</li>
+<li><p>x代表移动距离，如果mode=2,那么x必须为负数，代表倒数第几个字符。</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 自己创建一个“静夜思.txt”，将诗的内容复制进去</span></span><br><span class="line"><span class="comment"># 打开静夜思.txt，读取该文件</span></span><br><span class="line">f = open(<span class="string">'静夜思.txt'</span>, <span class="string">'rb'</span>)  <span class="comment"># 以二进制格式打开,防止可能出现的中文报错</span></span><br><span class="line">print(<span class="string">'当前指针位置'</span>, f.tell())</span><br><span class="line">f.seek(<span class="number">6</span>, <span class="number">0</span>)  <span class="comment"># 从头开始计算，把指针移动到第4个字符上</span></span><br><span class="line">str1 = f.read(<span class="number">1</span>)</span><br><span class="line">print(<span class="string">'当前指针位置'</span>, f.tell())</span><br><span class="line">print(str1)  <span class="comment"># 打印当前指针指向的字符</span></span><br><span class="line">f.seek(<span class="number">4</span>, <span class="number">1</span>)  <span class="comment"># 从当前位置往后移动2个</span></span><br><span class="line">str2 = f.read(<span class="number">1</span>)</span><br><span class="line">print(<span class="string">'当前指针位置'</span>, f.tell())</span><br><span class="line">print(str2)</span><br><span class="line">f.seek(<span class="number">-2</span>, <span class="number">2</span>)  <span class="comment"># 跳转到倒数第2个字符</span></span><br><span class="line">str3 = f.read(<span class="number">1</span>)</span><br><span class="line">print(<span class="string">'当前指针位置'</span>, f.tell())</span><br><span class="line">print(str3)</span><br><span class="line">f.close()</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">当前指针位置 0</span></span><br><span class="line"><span class="string">当前指针位置 7</span></span><br><span class="line"><span class="string">b'\xe6'</span></span><br><span class="line"><span class="string">当前指针位置 12</span></span><br><span class="line"><span class="string">b'\x88'</span></span><br><span class="line"><span class="string">当前指针位置 72</span></span><br><span class="line"><span class="string">b'\x80'</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>文件读写常用方法总结</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">常用方法</th>
+<th align="left">功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">open</td>
+<td align="left">打开文件，是读写文件的前提</td>
+</tr>
+<tr>
+<td align="left">write</td>
+<td align="left">写入内容到文件，需要有写入权限</td>
+</tr>
+<tr>
+<td align="left">read</td>
+<td align="left">读取文件内容，默认读取所有内容，返回字符串</td>
+</tr>
+<tr>
+<td align="left">readline</td>
+<td align="left">读取单行内容，返回字符串</td>
+</tr>
+<tr>
+<td align="left">readlines</td>
+<td align="left">读取所有行内容，返回列表</td>
+</tr>
+<tr>
+<td align="left">tell</td>
+<td align="left">给出当前指针位置</td>
+</tr>
+<tr>
+<td align="left">seek</td>
+<td align="left">跳转指针位置</td>
+</tr>
+<tr>
+<td align="left">close</td>
+<td align="left">关闭文件，防止内存占用</td>
+</tr>
+</tbody></table>
+<h2 id="对象序列化和反序列化"><a href="#对象序列化和反序列化" class="headerlink" title="对象序列化和反序列化"></a>对象序列化和反序列化</h2><h3 id="序列化作用"><a href="#序列化作用" class="headerlink" title="序列化作用"></a>序列化作用</h3><ul>
+<li>可以实现对象，比如列表，字典永久储存，而不用转成字符串后储存为文本。</li>
+<li>可以让对象边运行边储存，实现持久化运行，减少转化步骤和时间</li>
+</ul>
+<h3 id="反序列化作用"><a href="#反序列化作用" class="headerlink" title="反序列化作用"></a>反序列化作用</h3><ul>
+<li>可以让序列化的内容转化成对象直接使用。</li>
+<li>反序列化不需要再转格式，保证了对象的真实可靠性</li>
+</ul>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><ul>
+<li>先导入pickle函数</li>
+<li>使用dump将对象序列化成二进制文件</li>
+<li>使用load将二进制文件反序列化为对象</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line">dict1 = &#123;<span class="string">'key1'</span>: <span class="string">'value1'</span>&#125;  <span class="comment"># 定义一个简单字典</span></span><br><span class="line">f = open(<span class="string">'001.pkl'</span>, <span class="string">'wb'</span>)  <span class="comment"># pkl为pickle文件的后缀</span></span><br><span class="line">pickle.dump(dict1, f)  <span class="comment"># 将dict1序列化到001.pk1文件中</span></span><br><span class="line">f.close()</span><br><span class="line"><span class="comment"># 结果会生成一个001.pkl文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line">f = open(<span class="string">'001.pkl'</span>, <span class="string">'rb'</span>)</span><br><span class="line">dict2 = pickle.load(f)</span><br><span class="line">print(dict2)</span><br><span class="line">print(type(dict2))</span><br><span class="line">f.close()</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&#123;'key1': 'value1'&#125;</span></span><br><span class="line"><span class="string">&lt;class 'dict'&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>通过序列化和反序列化，可以让对象的内容和类型均不发生改变，这样就可以让对象运行、对象本地储存同时进行，实现可持续化运行。</li>
+<li>dump方法用于本地储存，dumps则不储存，而是直接查看序列化后的二进制内容。</li>
+<li>load方法用于本地文件加载，而loads则用于pickle二进制内容转python对象。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line">dict1 = &#123;<span class="string">'key1'</span>: <span class="string">'value1'</span>&#125;</span><br><span class="line">b1 = pickle.dumps(dict1)</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'001.pkl'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(b1)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line">f = open(<span class="string">'001.pkl'</span>, <span class="string">'rb'</span>)</span><br><span class="line">str1 = f.read()  <span class="comment"># 以二进制方式读取其内容</span></span><br><span class="line">dict1 = pickle.loads(str1)  <span class="comment"># 二进制转对象</span></span><br><span class="line">print(dict1)</span><br><span class="line">print(type(dict1))</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string"># 输出结果</span></span><br><span class="line"><span class="string">&#123;'key1': 'value1'&#125;</span></span><br><span class="line"><span class="string">&lt;class 'dict'&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>上面两个代码块和之前的代码块一致。</li>
+</ul>
+<h3 id="json序列化和反序列化"><a href="#json序列化和反序列化" class="headerlink" title="json序列化和反序列化"></a>json序列化和反序列化</h3><ul>
+<li>pickle用于对象转二进制文件的序列化，json则用于对象转文本后的序列化</li>
+<li>使用json.dump可以将对象转文本文件的序列化</li>
+<li>使用json.load可以将文本文件转对象格式的反序列化</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line">dict1 = &#123;<span class="string">'key1'</span>: <span class="string">'value1'</span>&#125;</span><br><span class="line">f = open(<span class="string">'001.json'</span>, <span class="string">'wt'</span>)  <span class="comment"># 以文本模式打开</span></span><br><span class="line">json.dump(dict1, f)</span><br><span class="line">f.close()</span><br><span class="line"><span class="comment"># 运行结束后，将会多出一个001.json文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line">f = open(<span class="string">'001.json'</span>, <span class="string">'rt'</span>)  <span class="comment"># 以文本读取模式打开</span></span><br><span class="line">dict1 = json.load(f)</span><br><span class="line">print(dict1)</span><br><span class="line">print(type(dict1))</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&#123;'key1': 'value1'&#125;</span></span><br><span class="line"><span class="string">&lt;class 'dict'&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>同样的json.dumps用于将对象转成文本内容（序列）</li>
+<li>json.loads用于将文本内容转成对象（反序列）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line">dict1 = &#123;<span class="string">'key1'</span>: <span class="string">'value1'</span>&#125;</span><br><span class="line">str1 = json.dumps(dict1)</span><br><span class="line">f = open(<span class="string">'001.json'</span>, <span class="string">'wt'</span>)  <span class="comment"># 以文本模式打开</span></span><br><span class="line">f.write(str1)</span><br><span class="line">f.close()</span><br><span class="line"><span class="comment"># 运行结束后，将会多出一个001.json文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line">f = open(<span class="string">'001.json'</span>, <span class="string">'rt'</span>)  <span class="comment"># 以文本模式打开</span></span><br><span class="line">str1 = f.read()</span><br><span class="line">dict1 = json.loads(str1)</span><br><span class="line">print(dict1)</span><br><span class="line">print(type(dict1))</span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">&#123;'key1': 'value1'&#125;</span></span><br><span class="line"><span class="string">&lt;class 'dict'&gt;</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/13/python%E5%A4%8D%E4%B9%A0100%E5%A4%A9--%E7%AC%AC7%E5%A4%A9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2716,213 +3185,6 @@ print(a)  <span class="comment"># 输出结果: 我爱你，中国</span>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/01/python%E9%87%91%E8%9E%8D%E9%87%8F%E5%8C%96-catalyst/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tlntin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Python博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/03/01/python%E9%87%91%E8%9E%8D%E9%87%8F%E5%8C%96-catalyst/" itemprop="url">安装catalyst</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-01T17:00:00+08:00">
-                2020-03-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python%E9%87%8F%E5%8C%96/" itemprop="url" rel="index">
-                    <span itemprop="name">python量化</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
-<li>官网链接<a href="https://enigma.co/catalyst/install.htm" target="_blank" rel="noopener">跳转</a></li>
-<li>安装必要依赖</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libatlas-base-dev python-dev gfortran pkg-config libfreetype6-dev</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装HDF5(十分重要)<ul>
-<li>下载地址：<a href="https://support.hdfgroup.org/ftp/HDF5/releases/" target="_blank" rel="noopener">跳转</a>, 下载tar.gz结尾文件，解压，依次输入，第三步比较慢，耐心等待</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/hdf5     # 配置安装路径</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo make -j8   # 编译</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo make check</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo make check-install</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH="$PATH:/usr/local/hdf5"    # 保险起见输一个</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>创建虚拟环境</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> pip install virtualenv</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> virtualenv catalyst-venv</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">source</span> ./catalyst-venv/bin/activate</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>升级pip、setuptools</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade pip setuptools</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装numpy</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install numpy</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装catalyst"><a href="#安装catalyst" class="headerlink" title="安装catalyst"></a>安装catalyst</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --pre enigma-catalyst</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>测试一下是否安装成功</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">catalyst --version</span><br></pre></td></tr></table></figure>
-
-<h2 id="导入数据"><a href="#导入数据" class="headerlink" title="导入数据"></a>导入数据</h2><ul>
-<li>下面是导入bitfinex的日线数据（需要fq）</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">catalyst ingest-exchange -x bitfinex -i btc_usdt -f daily</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>也可以导入分钟数据(建议用这个)</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">catalyst ingest-exchange -x bitfinex -i btc_usdt -f minute</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>导入数据帮助</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">catalyst ingest-exchange --help</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>测试代码</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> catalyst.api <span class="keyword">import</span> order, record, symbol</span><br><span class="line"><span class="keyword">from</span> catalyst <span class="keyword">import</span> run_algorithm</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(context)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    用于内容的初始化</span></span><br><span class="line"><span class="string">    context是一个命令空间用于存放变量</span></span><br><span class="line"><span class="string">    :param context: 内容包括很多数据，其中一个asset可以设置交易对</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    context.asset = symbol(<span class="string">'btc_usd'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">handle_data</span><span class="params">(context, data)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    用于模拟交易</span></span><br><span class="line"><span class="string">    :param context: 命名空间，用于存放变量</span></span><br><span class="line"><span class="string">    :param data:模拟数据来源</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># 每个交易周期买入1个币种，卖出为-1</span></span><br><span class="line">    order(context.asset, <span class="number">1</span>)</span><br><span class="line">    <span class="comment"># 记录每个交易周期的比特币价格</span></span><br><span class="line">    record(btc=data.current(context.asset, <span class="string">'price'</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    run_algorithm(</span><br><span class="line">        capital_base=<span class="number">10000</span>,  <span class="comment"># 回溯的启动资金</span></span><br><span class="line">        data_frequency=<span class="string">'daily'</span>,  <span class="comment"># 日线或者分钟线</span></span><br><span class="line">        initialize=initialize,  <span class="comment"># 初始化函数</span></span><br><span class="line">        handle_data=handle_data,  <span class="comment"># 用于处理算法的数据函数</span></span><br><span class="line">        analyze=<span class="literal">None</span>,</span><br><span class="line">        exchange_name=<span class="string">'bitfinex'</span>,  <span class="comment"># 交易所名称</span></span><br><span class="line">        algo_namespace=<span class="string">'buy_btc_simple'</span>,  <span class="comment"># 算法的命名空间</span></span><br><span class="line">        quote_currency=<span class="string">'usdt'</span>,  <span class="comment"># 基础货币名称</span></span><br><span class="line">        start=pd.to_datetime(<span class="string">'2016-03-01'</span>, utc=<span class="literal">True</span>),  <span class="comment"># 开始时间</span></span><br><span class="line">        end=pd.to_datetime(<span class="string">'2017-10-31'</span>, utc=<span class="literal">True</span>),  <span class="comment"># 结束时间</span></span><br><span class="line">        output=<span class="string">'buy_btc_simple_out.pickle'</span>  <span class="comment"># 文件输出,只能是piｃｋle文件</span></span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2973,7 +3235,7 @@ print(a)  <span class="comment"># 输出结果: 我爱你，中国</span>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
